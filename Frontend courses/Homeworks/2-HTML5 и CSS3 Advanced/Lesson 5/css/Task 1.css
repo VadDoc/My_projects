@@ -1,0 +1,49 @@
+/* Задание
+Создайте горизонтальное меню и разработайте анимированные выпадающие подменю при наведении мыши. */
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown {
+  font-family: sans-serif;
+  margin: 5px;
+  color: white;
+}
+
+.main-menu {
+  min-width: 100px;
+  background-color: blue;
+  border-radius: 5px;
+  cursor: pointer;
+  padding:20px;
+  font-weight: bold;
+  transition: all ease-out 0.4s;
+}
+.sub-menu {
+  display: none;
+}
+.sub-menu a {
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+  margin-top: 5px;
+  transition: all ease-out 0.4s;
+}
+.dropdown:hover .sub-menu {
+  display: block;
+}
+
+.main-menu:hover {
+  background-color:rgb(2, 2, 102);
+  transform: scale(1.1);
+}
+
+.sub-menu a:hover {
+  background-color: rgb(3, 83, 3);
+  transform: scale(1.1);
+}

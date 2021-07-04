@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.addEventListener("load", function () {
+      let save = document.getElementById("saveButton")
+      save.addEventListener("click", function () {
+        let selectedColor = getCheckedRadioId("color")
+        window.sessionStorage.setItem("font-color=", encodeURIComponent(selectedColor));
+        document.body.style.color = selectedColor;
+      });
+      //Работа radio input
+      function getCheckedRadioId(name) {
+        let elements = document.getElementsByName(name);
+
+        for (let i = 0, len = elements.length; i < len; ++i)
+          if (elements[i].checked) return elements[i].value;
+      }
+    })
+  </script>
+</head>
+
+<body>
+  <p>Paragraph</p>
+  <p>Paragraph</p>
+  <p>Paragraph</p>
+  <form>
+    <input type="radio" name="color" value="red" /> Red
+    <input type="radio" name="color" value="green" /> Green
+    <input id="saveButton" type="button" value="Сохранить" />
+  </form>
+</body>
+
+</html>

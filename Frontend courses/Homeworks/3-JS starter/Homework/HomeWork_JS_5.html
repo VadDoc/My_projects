@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 400px;
+      background-color: rgb(236, 235, 234);
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 40px 20px 0px 20px;
+      margin: 10px;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      text-align: center;
+    }
+
+    img {
+      position: relative;
+      top: -50px;
+      left: 50px;
+      width: 150px;
+    }
+
+    .text-right {
+      text-align: right;
+    }
+  </style>
+
+  <script>
+    // Домашняя работа
+    // Дополнительное задание
+    const manager = {};
+    manager.firstName = prompt("Введите имя менеджера", "Сергей");
+    manager.lastName = prompt("Введите фамилию менеджера", "Белый");
+    manager.age = prompt("Введите возрвст менеджера", "35");
+
+    const secretar = new Object();
+    secretar.firstName = prompt("Введите имя секретаря", "Анна");
+    secretar.lastName = prompt("Введите фамилию секретаря", "Черная");
+    secretar.age = prompt("Введите возрвст секретаря", "25");
+
+    console.log("<p>Менеджер: " + manager.firstName + " " + manager.lastName + ", " + manager.age + " лет");
+    console.log("<p>Секретарь: " + secretar.firstName + " " + secretar.lastName + ", " + secretar.age + " лет")
+
+    console.group(manager);
+    console.group(secretar);
+
+    console.group("Имя");
+    console.log(manager.firstName);
+    console.log(secretar.firstName);
+
+    console.group("Фамилия");
+    console.log(manager.lastName);
+    console.log(secretar.lastName);
+
+    console.group("Возраст");
+    console.log(manager.age);
+    console.log(secretar.age);
+
+    // Задание 1
+    const doc = {
+      attachment: {},
+      ask: function () {
+        doc.title = prompt("Заполните заголовок документа", "Товарно-кассовый чек №___");
+        doc.body = prompt("Заполните тело документа", "Оказаны услуги на сумму 100 грн.");
+        doc.footer = prompt("Заполните подвал документа", "Подпись ___________ Ф.И.О.");
+        doc.date = prompt("Заполните дату документа", "30.04.2020 г.");
+        doc.attachment.title = prompt("Заполните заголовок приложения документа", "Приложение к т/к чеку №___");
+        doc.attachment.body = prompt("Заполните тело приложения документа", "Оказаны услуги на сумму 50 грн.");
+        doc.attachment.footer = prompt("Заполните подвал приложения документа", "Подпись ___________ Ф.И.О.");
+        doc.attachment.date = prompt("Заполните дату приложения документа", "30.04.2020 г.");
+      },
+      show: function () {
+        document.write("<div><h2>" + doc.title + "</h2><p class='text-right'>от " + doc.date + "</p><p>" + doc
+          .body + "</p><p>" + doc.footer + "</p><p><img src='../Images/oplacheno.png' alt='Оплачено'></p></div>");
+        document.write("<div><h2>" + doc.attachment.title + "</h2><p class='text-right'>от " + doc.attachment.date +
+          "</p><p>" + doc.attachment.body + "</p><p>" + doc.attachment.footer +
+          "</p><p><img src='../Images/oplacheno.png' alt='Оплачено'></p></div>");
+      },
+    }
+    doc.ask();
+    doc.show();
+  </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

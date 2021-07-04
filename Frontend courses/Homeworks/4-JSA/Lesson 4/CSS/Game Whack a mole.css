@@ -1,0 +1,72 @@
+body {
+  margin: 40px 0 0 400px;
+  padding: 0;
+  background-color: rgb(235, 233, 233);
+}
+
+table {
+  width: 500px;
+  height: 550px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+  background-color: rgb(218, 214, 214);
+  padding: 0;
+}
+
+.start {
+  background-color: rgb(218, 214, 214);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: rgb(56, 55, 55);
+}
+
+.win {
+  background-color: green;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: yellow;
+}
+
+.loose {
+  background-color: red;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: black;
+}
+
+.button {
+  background-color: rgb(200, 197, 197);
+  width: 121px;
+  height: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: rgb(80, 80, 80);
+}
+
+.button-on {
+  background-color: rgb(80, 80, 80);
+  width: 121px;
+  height: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: rgb(200, 197, 197);
+}
+
+.button:active {
+  background-color: red;
+  width: 121px;
+  height: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: rgb(200, 197, 197);
+}

@@ -1,0 +1,72 @@
+.print-a3,
+.business-cards,
+.flyers-1,
+.flyers-2,
+.eurobooklets {
+    display: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.print-calculator {
+    display: flex;
+}
+
+.print-calculator-choose {
+
+}
+
+.container-title {
+    margin-top: 5px;
+    padding-top: 5px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.container-result {
+    display: none;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+.container-type-print {
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+.title-print {
+    margin-top: 5px;
+    padding-top: 5px;
+    /* font-weight: bold; */
+}
+
+.inputs-print {}
+
+label {
+    /* font-weight: bold; */
+}
+
+input,
+select {
+    font-size: .9em;
+}
+
+.image img {
+    margin: 50px;
+    height: 250px;
+    width: 250px;
+}
+
+#number-a3 {
+    width: 70px;
+}
+
+.result {
+    font-weight: bold;
+    font-size: 1.2em;
+}

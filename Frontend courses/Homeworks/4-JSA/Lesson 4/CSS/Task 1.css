@@ -1,0 +1,33 @@
+/* div {
+  width: 100px;
+  height: 100px;
+  border: 2px solid white;
+} */
+
+.grey {
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+  float: left;
+  border: 2px solid white;
+}
+
+.red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  float: left;
+  border: 2px solid white;
+}
+
+.green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  float: left;
+  border: 2px solid white;
+}
+
+.clear-both {
+  clear: both;
+}

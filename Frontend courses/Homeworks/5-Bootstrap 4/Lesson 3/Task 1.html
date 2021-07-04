@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/Task 1.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row bg-light form-box">
+      <div class="col-12">
+        <form class="needs-validation" novalidate>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <input type="email" class="form-control" placeholder="Email address" required>
+              <div class="valid-feedback">
+                Thanks, looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please provide a valid email.
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <input type="password" class="form-control" placeholder="Password" required>
+              <div class="valid-feedback">
+                Thanks, looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please provide a password.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" placeholder="First name" required>
+              <div class="valid-feedback">
+                Thanks, looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please provide your First name.
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" placeholder="Last name" required>
+              <div class="valid-feedback">
+                Thanks, looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please provide your Last name.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <input type="number" class="form-control" placeholder="Age" required>
+              <div class="valid-feedback">
+                Thanks, looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please provide your age.
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+            <div class="form-check form-check-inline mt-1">
+              <div class="gender">Your gender:</div>
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Radio1" value="option1" checked>
+              <label class="form-check-label" for="Radio1">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Radio2" value="option2">
+              <label class="form-check-label" for="Radio2">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Radio1" value="option1">
+              <label class="form-check-label" for="Radio1">Transgender</label>
+            </div>
+
+          </div>
+        </div>
+
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" placeholder="Your city" required>
+              <div class="invalid-feedback">
+                Please provide a valid city.
+              </div>
+              <div class="valid-feedback">
+                Thanks, looks good!
+              </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <select class="custom-select" required>
+                <option selected disabled value="">Choose your state...</option>
+                <option>Ukraine</option>
+                <option>Belarus</option>
+                <option>France</option>
+                <option>Germany</option>
+                <option>Moldova</option>
+                <option>Poland</option>
+                <option>Russia</option>                
+                <option>United Kingdom</option>
+                <option>USA</option>
+              </select>
+              <div class="valid-feedback">
+                Thanks, looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please select a valid state.
+              </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <input type="number" class="form-control" placeholder="Your Zip" required>
+              <div class="valid-feedback">
+                Thanks, looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please provide a valid zip.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-secondary" type="submit">Submit form</button>
+        </form>
+
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active" id="text1-list" data-toggle="list" href="#text1" role="tab" aria-controls="home">Text 1</a>
+              <a class="list-group-item list-group-item-action" id="text2-list" data-toggle="list" href="#text2" role="tab" aria-controls="profile">Text 2</a>
+              <a class="list-group-item list-group-item-action" id="text3-list" data-toggle="list" href="#text3" role="tab" aria-controls="messages">Text 3</a>
+              <a class="list-group-item list-group-item-action" id="text4-list" data-toggle="list" href="#text4" role="tab" aria-controls="settings">Text 4</a>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="text1" role="tabpanel" aria-labelledby="text1-list">Text 1. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil aliquid repudiandae eaque reprehenderit, obcaecati aut, perferendis, amet maiores harum sit atque! Ut ducimus similique recusandae inventore quasi modi, atque tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam neque excepturi, in inventore ipsum molestias nostrum assumenda, natus blanditiis esse dolores laborum mollitia obcaecati fugiat eligendi, quasi nesciunt quae sunt!</div>
+              <div class="tab-pane fade" id="text2" role="tabpanel" aria-labelledby="text2-list">Text 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet ipsa harum temporibus repellat nobis. Expedita voluptatem harum repellat, blanditiis cupiditate, architecto sapiente esse id exercitationem provident nobis, iusto fugit aliquid!</div>
+              <div class="tab-pane fade" id="text3" role="tabpanel" aria-labelledby="text3-list">Text 3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aliquam necessitatibus rem odio sed iusto, molestias, doloremque excepturi, vel aspernatur nulla. Quae minima quod consequuntur molestiae! Perspiciatis placeat cumque molestias! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium reprehenderit perspiciatis facere quis ex. Tempore temporibus sunt sapiente saepe nihil! Repellat dolorem deleniti alias ducimus omnis magnam ad nobis quidem!</div>
+              <div class="tab-pane fade" id="text4" role="tabpanel" aria-labelledby="text4-list">Text 4. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, delectus suscipit. Molestiae inventore veniam fugiat at consectetur facere omnis reprehenderit unde, repellat molestias nesciunt ipsam tempore voluptatum adipisci. Sapiente, illo!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Collapse panel #1
+                </button>
+              </h5>
+            </div>
+        
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis explicabo similique inventore delectus, nobis repellat voluptatum incidunt officia, debitis iste culpa fugit, repellendus numquam obcaecati commodi laudantium distinctio libero totam!
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Collapse panel #2
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem adipisci laboriosam ipsam, amet quae cumque nam officiis, maxime reprehenderit ut doloribus. Asperiores esse sequi mollitia. Omnis temporibus quo voluptatem possimus.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Collapse panel #3
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius aspernatur nam velit quidem, autem veritatis aliquam officia corrupti hic perspiciatis, libero quia culpa quasi suscipit commodi. Porro deserunt ad dolor.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Collapse panel #4
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur maiores est similique blanditiis! Itaque laudantium ea dicta qui? Aperiam atque natus in, labore id et minus accusantium a autem.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!------------------------------------------ Javascript ------------------------------------------->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+  <script src="./js/Task 1.js"></script>
+</body>
+</html>

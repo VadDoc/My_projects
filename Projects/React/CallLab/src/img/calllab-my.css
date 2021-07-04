@@ -1,0 +1,9 @@
+.section-header {
+    border-top: 10px solid #aeb8ff;
+    padding: 0 0 600px;
+    position: relative;
+    background: url(./img/eclipse-header-1.png) top -150px left 170px no-repeat, url(./img/eclipse-header-2.png) top 400px right 210px no-repeat, url(./img/eclipse-header-3.png) top 40px right -130px no-repeat;
+
+    /* background-image: url(./img/eclipse-header-1.png); */
+    background-size: 1000px 976px, 530px, 20%
+}

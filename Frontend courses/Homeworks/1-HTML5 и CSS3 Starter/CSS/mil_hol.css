@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: auto;
+  width: 1366px;
+  height: 768px;
+  background-image: url(../Images/Classwork8/background@1X.png);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  height: 141px;
+  padding: 0px 150px 0 157px;
+}
+
+section {
+  height: 595px;
+  padding: 0px 117px 0 124px;
+}
+
+footer {
+  height: 32px;
+}
+
+article {
+  width: 307px;
+  padding: 0px 34px 0 34px;
+  margin-bottom: 0px;
+  float: left;
+}
+
+.header-left::before {
+  content: url(../Images/Classwork8/logo@1X.png);
+}
+
+.header-left:hover::before {
+  content: url(../Images/Classwork8/logo@1X\ \(1\).png);
+}
+
+.mil-holidays {
+  width: 105px;
+  height: 44px;
+  position: relative;
+  top: -57px;
+  left: 59px;
+}
+
+.dark {
+  background-color: rgba(0, 0, 0, 0.726);
+}
+
+.header-left {
+  width: 165px;
+  height: 44px;
+  padding-top: 49px;
+  float: left;
+}
+
+.header-right {
+  width: 243px;
+  padding-top: 55px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 255);
+  text-align: right;
+  float: right;
+}
+
+.milan,
+.holidays {
+  font-weight: bolder;
+  color: rgba(255, 255, 255, 255);
+  text-align: left;
+}
+
+.milan {
+  font-size: 29px;
+}
+
+.holidays {
+  font-size: 18px;
+}
+
+.header-left:hover .milan,
+.header-left:hover .holidays {
+  color: rgba(242, 101, 34, 255);
+}
+
+.image {
+  width: 307px;
+  height: 200px;
+  border: 2px solid white;
+  box-shadow: 0 10px 20px 10px;
+  border-image: linear-gradient(to top, transparent 0%, white 100%);
+  border-image-slice: 1;
+}
+
+.img-title {
+  padding-top: 15px;
+  margin-bottom: 56px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 255);
+  text-align: center;
+}
+
+.img-title:hover {
+  color: rgba(242, 101, 34, 255);
+}
+
+.img-title:hover~div,
+.image:hover~div {
+  display: block;
+}
+
+.hover-box-image-1row {
+  display: none;
+  position: absolute;
+  top: 290px;
+}
+
+.hover-box-text-1row {
+  width: 306px;
+  height: 70px;
+  display: none;
+  position: absolute;
+  color: white;
+  top: 298px;
+}
+
+.hover-box-image-2row {
+  display: none;
+  position: absolute;
+  top: 590px;
+}
+
+.hover-box-text-2row {
+  width: 306px;
+  height: 70px;
+  display: none;
+  position: absolute;
+  color: white;
+  top: 598px;
+}
+
+.left-box-text {
+  float: left;
+  width: 50px;
+  height: 70px;
+  margin-left: 21px;
+}
+
+.right-box-text {
+  float: right;
+  width: 120px;
+  height: 70px;
+  padding-top: 24px;
+  font-size: 14px;
+}
+
+.from {
+  font-size: 10px;
+}
+
+.euro {
+  font-size: 20px;
+}
+
+.right-box-text::after {
+  content: url(../Images/Classwork8/Arrow@1X.png);
+}
+
+.copy {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 255);
+  text-align: center;
+}

@@ -1,0 +1,44 @@
+.welcome {
+  padding-top: 20px;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.portofolio {
+  padding-top: 20px;
+  font-size: 1.85rem;
+  font-weight: 500;
+}
+
+.card-row-one {
+  margin-top: 20px;
+  height: 220px;
+}
+
+.card-row-portofolio1 {
+  height: 510px;
+  margin-bottom: 30px;
+}
+
+.card-row-portofolio2 {
+  height: 510px;
+  margin-bottom: 20px;
+}
+
+.my-sport {
+  font-size: 1.85rem;
+  font-weight: 500;
+}
+
+.line {
+  margin-top: 20px;
+  background-color: rgb(224, 223, 223);
+}
+
+.footer {
+  height: 100px;
+  margin-top: 50px;
+  padding-top: 40px;
+  text-align: center;
+  color: white;
+}

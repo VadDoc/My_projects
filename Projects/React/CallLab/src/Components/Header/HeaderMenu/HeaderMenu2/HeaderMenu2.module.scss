@@ -1,0 +1,17 @@
+.box {
+    display: none;
+    height: 140px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    background-color: rgb(4, 158, 119);
+    background-color: rgb(34, 206, 163);
+
+    a {
+        color: white;
+    }
+
+    a:hover {
+        color: rgb(48, 243, 233);
+    }
+}

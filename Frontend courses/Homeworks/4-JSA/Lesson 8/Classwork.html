@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function init() {
+      let output = document.getElementById("output");
+      let btn1 = document.getElementById("btn1");
+      let btn2 = document.getElementById("btn2");
+      let btn3 = document.getElementById("btn3");
+
+      btn1.onclick = function () {
+        window.sessionStorage.setItem("one", "111");
+      }
+
+      btn2.onclick = function () {
+        output.innerHTML = window.sessionStorage.getItem("one");
+      }
+
+      btn3.onclick = function () {
+        window.sessionStorage.clear(); //Удаление cookie
+      }
+    }
+
+    window.addEventListener("load", init, false);
+  </script>
+</head>
+
+<body>
+  </p>
+  <input id="btn1" type="button" value="Запись в sessionStorage" />
+  <input id="btn2" type="button" value="Чтение из sessionStorage" />
+  <input id="btn3" type="button" value="Удаление из sessionStorage" />
+
+  <div id="output">
+  </div>
+
+</body>
+
+</html>

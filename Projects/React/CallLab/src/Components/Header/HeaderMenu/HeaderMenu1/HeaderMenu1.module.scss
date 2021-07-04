@@ -1,0 +1,55 @@
+.box {
+    display: flex;
+    height: 140px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    .text {
+        width: 135px;
+    }
+
+    .menu {
+        display: flex;
+        cursor: pointer;
+        padding-left: 2%;
+
+        .text {
+            padding-top: 10px;
+            padding-left: 20px;
+            font-size: 1.1rem;
+        }
+    }
+
+    .phone {
+        // color: rgb(49, 184, 148);
+
+        // a {
+        //     color: rgb(49, 184, 148);
+        // }
+
+        p:first-child {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+    }
+
+    .btnOrder {
+        width: 200px;
+        height: 60px;
+        border: solid 3px orange;
+        border-radius: 30px;
+        background-color: transparent;
+        color: orange;
+        font-size: 1.2rem;
+        font-weight: bold;
+        transition: ease .4s all;
+    }
+    
+    .btnOrder:hover {
+        color: white;
+        background-color: orange;
+        cursor: pointer;
+    }
+}

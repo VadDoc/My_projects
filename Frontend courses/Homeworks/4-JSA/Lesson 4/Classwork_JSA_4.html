@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .circle {
+      float: left;
+    }
+
+    .circleNone {
+      display: none;
+    }
+  </style>
+  <script>
+    // 
+    window.onload = () => {
+      const userDiametr = prompt("Введите диаметр круга", "50");
+
+      const table = document.createElement('table');
+      const tr1 = document.createElement('tr');
+      const tr2 = document.createElement('tr');
+      const tr3 = document.createElement('tr');
+      const tr4 = document.createElement('tr');
+      const tr5 = document.createElement('tr');
+      const td1 = document.createElement('td');
+      const td2 = document.createElement('td');
+      const td3 = document.createElement('td');
+      const td4 = document.createElement('td');
+      const td5 = document.createElement('td');
+
+      document.body.append(table);
+
+      table.append(tr1);
+      table.append(tr2);
+      table.append(tr3);
+      table.append(tr4);
+      table.append(tr5);
+
+      tr1.append(td1);
+      tr2.append(td2);
+      tr3.append(td3);
+      tr4.append(td4);
+      tr5.append(td5);
+
+      function Circle() {
+        this.class = "circle";
+        this.style = `width:${userDiametr}px; height:${userDiametr}px; border-radius: 50%`;
+      }
+
+      let circle1 = new Circle();
+      let circle2 = new Circle();
+      let circle3 = new Circle();
+      let circle4 = new Circle();
+      let circle5 = new Circle();
+      let circle6 = new Circle();
+      let circle7 = new Circle();
+      let circle8 = new Circle();
+      let circle9 = new Circle();
+      let circle10 = new Circle();
+      let circle11 = new Circle();
+      let circle12 = new Circle();
+      let circle13 = new Circle();
+      let circle14 = new Circle();
+      let circle15 = new Circle();
+      let circle16 = new Circle();
+      let circle17 = new Circle();
+      let circle18 = new Circle();
+      let circle19 = new Circle();
+      let circle20 = new Circle();
+      let circle21 = new Circle();
+      let circle22 = new Circle();
+      let circle23 = new Circle();
+      let circle24 = new Circle();
+      let circle25 = new Circle();
+
+      let divCircle1 = document.createElement('div');
+      let divCircle2 = document.createElement('div');
+      let divCircle3 = document.createElement('div');
+      let divCircle4 = document.createElement('div');
+      let divCircle5 = document.createElement('div');
+      let divCircle6 = document.createElement('div');
+      let divCircle7 = document.createElement('div');
+      let divCircle8 = document.createElement('div');
+      let divCircle9 = document.createElement('div');
+      let divCircle10 = document.createElement('div');
+      let divCircle11 = document.createElement('div');
+      let divCircle12 = document.createElement('div');
+      let divCircle13 = document.createElement('div');
+      let divCircle14 = document.createElement('div');
+      let divCircle15 = document.createElement('div');
+      let divCircle16 = document.createElement('div');
+      let divCircle17 = document.createElement('div');
+      let divCircle18 = document.createElement('div');
+      let divCircle19 = document.createElement('div');
+      let divCircle20 = document.createElement('div');
+      let divCircle21 = document.createElement('div');
+      let divCircle22 = document.createElement('div');
+      let divCircle23 = document.createElement('div');
+      let divCircle24 = document.createElement('div');
+      let divCircle25 = document.createElement('div');
+
+      document.getElementById("buttonDrawCircle").onclick = () => {
+        for (i in circle1) {
+          divCircle1.setAttribute(i, circle1[i]);
+          divCircle1.setAttribute('id', 'idDivCircle1');
+          td1.append(divCircle1);
+        }
+
+        for (i in circle2) {
+          divCircle2.setAttribute(i, circle2[i]);
+          divCircle2.setAttribute('id', 'idDivCircle2');
+          td1.append(divCircle2);
+        }
+
+        for (i in circle3) {
+          divCircle3.setAttribute(i, circle3[i]);
+          divCircle3.setAttribute('id', 'idDivCircle3');
+          td1.append(divCircle3);
+        }
+
+        for (i in circle4) {
+          divCircle4.setAttribute(i, circle4[i]);
+          divCircle4.setAttribute('id', 'idDivCircle4');
+          td1.append(divCircle4);
+        }
+
+        for (i in circle5) {
+          divCircle5.setAttribute(i, circle5[i]);
+          divCircle5.setAttribute('id', 'idDivCircle5');
+          td1.append(divCircle5);
+        }
+
+        for (i in circle6) {
+          divCircle6.setAttribute(i, circle6[i]);
+          divCircle6.setAttribute('id', 'idDivCircle6');
+          td2.append(divCircle6);
+        }
+
+        for (i in circle7) {
+          divCircle7.setAttribute(i, circle7[i]);
+          divCircle7.setAttribute('id', 'idDivCircle7');
+          td2.append(divCircle7);
+        }
+
+        for (i in circle8) {
+          divCircle8.setAttribute(i, circle8[i]);
+          divCircle8.setAttribute('id', 'idDivCircle8');
+          td2.append(divCircle8);
+        }
+
+        for (i in circle9) {
+          divCircle9.setAttribute(i, circle9[i]);
+          divCircle9.setAttribute('id', 'idDivCircle9');
+          td2.append(divCircle9);
+        }
+
+        for (i in circle10) {
+          divCircle10.setAttribute(i, circle10[i]);
+          divCircle10.setAttribute('id', 'idDivCircle10');
+          td2.append(divCircle10);
+        }
+
+        for (i in circle11) {
+          divCircle11.setAttribute(i, circle1[i]);
+          divCircle11.setAttribute('id', 'idDivCircle11');
+          td3.append(divCircle11);
+        }
+
+        for (i in circle12) {
+          divCircle12.setAttribute(i, circle12[i]);
+          divCircle12.setAttribute('id', 'idDivCircle12');
+          td3.append(divCircle12);
+        }
+
+        for (i in circle13) {
+          divCircle13.setAttribute(i, circle13[i]);
+          divCircle13.setAttribute('id', 'idDivCircle13');
+          td3.append(divCircle13);
+        }
+
+        for (i in circle14) {
+          divCircle14.setAttribute(i, circle14[i]);
+          divCircle14.setAttribute('id', 'idDivCircle14');
+          td3.append(divCircle14);
+        }
+
+        for (i in circle15) {
+          divCircle15.setAttribute(i, circle15[i]);
+          divCircle15.setAttribute('id', 'idDivCircle15');
+          td3.append(divCircle15);
+        }
+
+        for (i in circle16) {
+          divCircle16.setAttribute(i, circle16[i]);
+          divCircle16.setAttribute('id', 'idDivCircle16');
+          td4.append(divCircle16);
+        }
+
+        for (i in circle17) {
+          divCircle17.setAttribute(i, circle17[i]);
+          divCircle17.setAttribute('id', 'idDivCircle17');
+          td4.append(divCircle17);
+        }
+
+        for (i in circle18) {
+          divCircle18.setAttribute(i, circle18[i]);
+          divCircle18.setAttribute('id', 'idDivCircle18');
+          td4.append(divCircle18);
+        }
+
+        for (i in circle19) {
+          divCircle19.setAttribute(i, circle19[i]);
+          divCircle19.setAttribute('id', 'idDivCircle19');
+          td4.append(divCircle19);
+        }
+
+        for (i in circle20) {
+          divCircle20.setAttribute(i, circle20[i]);
+          divCircle20.setAttribute('id', 'idDivCircle20');
+          td4.append(divCircle20);
+        }
+
+        for (i in circle21) {
+          divCircle21.setAttribute(i, circle21[i]);
+          divCircle21.setAttribute('id', 'idDivCircle21');
+          td5.append(divCircle21);
+        }
+
+        for (i in circle22) {
+          divCircle22.setAttribute(i, circle22[i]);
+          divCircle22.setAttribute('id', 'idDivCircle22');
+          td5.append(divCircle22);
+        }
+
+        for (i in circle23) {
+          divCircle23.setAttribute(i, circle23[i]);
+          divCircle23.setAttribute('id', 'idDivCircle23');
+          td5.append(divCircle23);
+        }
+
+        for (i in circle24) {
+          divCircle24.setAttribute(i, circle24[i]);
+          divCircle24.setAttribute('id', 'idDivCircle24');
+          td5.append(divCircle24);
+        }
+
+        for (i in circle25) {
+          divCircle25.setAttribute(i, circle25[i]);
+          divCircle25.setAttribute('id', 'idDivCircle25');
+          td5.append(divCircle25);
+        }
+
+        let color1 = 200;
+        let color2 = 90;
+        let color3 = 150;
+        let color4 = 60;
+        let color5 = 260;
+        let color6 = 100;
+        let color7 = 290;
+        let color8 = 40;
+        let color9 = 0;
+        let color10 = 120;
+        let color11 = 150;
+        let color12 = 290;
+        let color13 = 10;
+        let color14 = 60;
+        let color15 = 280;
+        let color16 = 120;
+        let color17 = 180;
+        let color18 = 40;
+        let color19 = 10;
+        let color20 = 220;
+        let color21 = 110;
+        let color22 = 50;
+        let color23 = 190;
+        let color24 = 630;
+        let color25 = 320;
+
+        setInterval(function () {
+          color1 = color1 + 1 % 360;
+          divCircle1.style.backgroundColor = "hsl(" + color1 + ", 100%, 50%)";
+
+          color2 = color2 + 1 % 360;
+          divCircle2.style.backgroundColor = "hsl(" + color2 + ", 100%, 50%)";
+
+          color3 = color3 + 1 % 360;
+          divCircle3.style.backgroundColor = "hsl(" + color3 + ", 100%, 50%)";
+
+          color4 = color4 + 1 % 360;
+          divCircle4.style.backgroundColor = "hsl(" + color4 + ", 100%, 50%)";
+
+          color5 = color5 + 1 % 360;
+          divCircle5.style.backgroundColor = "hsl(" + color5 + ", 100%, 50%)";
+
+          color6 = color6 + 1 % 360;
+          divCircle6.style.backgroundColor = "hsl(" + color6 + ", 100%, 50%)";
+
+          color7 = color7 + 1 % 360;
+          divCircle7.style.backgroundColor = "hsl(" + color7 + ", 100%, 50%)";
+
+          color8 = color8 + 1 % 360;
+          divCircle8.style.backgroundColor = "hsl(" + color8 + ", 100%, 50%)";
+
+          color9 = color9 + 1 % 360;
+          divCircle9.style.backgroundColor = "hsl(" + color9 + ", 100%, 50%)";
+
+          color10 = color10 + 1 % 360;
+          divCircle10.style.backgroundColor = "hsl(" + color10 + ", 100%, 50%)";
+
+          color11 = color11 + 1 % 360;
+          divCircle11.style.backgroundColor = "hsl(" + color11 + ", 100%, 50%)";
+
+          color12 = color12 + 1 % 360;
+          divCircle12.style.backgroundColor = "hsl(" + color12 + ", 100%, 50%)";
+
+          color13 = color13 + 1 % 360;
+          divCircle13.style.backgroundColor = "hsl(" + color13 + ", 100%, 50%)";
+
+          color14 = color14 + 1 % 360;
+          divCircle14.style.backgroundColor = "hsl(" + color14 + ", 100%, 50%)";
+
+          color15 = color15 + 1 % 360;
+          divCircle15.style.backgroundColor = "hsl(" + color15 + ", 100%, 50%)";
+
+          color16 = color16 + 1 % 360;
+          divCircle16.style.backgroundColor = "hsl(" + color16 + ", 100%, 50%)";
+
+          color17 = color17 + 1 % 360;
+          divCircle17.style.backgroundColor = "hsl(" + color17 + ", 100%, 50%)";
+
+          color18 = color18 + 1 % 360;
+          divCircle18.style.backgroundColor = "hsl(" + color18 + ", 100%, 50%)";
+
+          color19 = color19 + 1 % 360;
+          divCircle19.style.backgroundColor = "hsl(" + color19 + ", 100%, 50%)";
+
+          color20 = color20 + 1 % 360;
+          divCircle20.style.backgroundColor = "hsl(" + color20 + ", 100%, 50%)";
+
+          color21 = color21 + 1 % 360;
+          divCircle21.style.backgroundColor = "hsl(" + color21 + ", 100%, 50%)";
+
+          color22 = color22 + 1 % 360;
+          divCircle22.style.backgroundColor = "hsl(" + color22 + ", 100%, 50%)";
+
+          color23 = color23 + 1 % 360;
+          divCircle23.style.backgroundColor = "hsl(" + color23 + ", 100%, 50%)";
+
+          color24 = color24 + 1 % 360;
+          divCircle24.style.backgroundColor = "hsl(" + color24 + ", 100%, 50%)";
+
+          color25 = color25 + 1 % 360;
+          divCircle25.style.backgroundColor = "hsl(" + color25 + ", 100%, 50%)";
+        }, 50);
+
+        document.onclick = function (event) {
+          let tag = event.target;
+          if (tag.tagName == "DIV") {
+            tag.className = "circleNone";
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <input id="buttonDrawCircle" type="button" value="Нарисовать круг">
+</body>
+
+</html>

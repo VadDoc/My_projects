@@ -1,0 +1,36 @@
+.box {
+    padding: 31px 80px;
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 70px;
+    background-color: white;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    z-index: 2;
+
+    .title {
+        position: relative;
+        text-align: center;
+        padding-bottom: 20px;
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: rgb(78, 78, 78);
+    }
+
+    .serverMessage {
+        color: red;
+    }
+}
+
+.box::after {
+    position: absolute;
+    top: -501px;
+    z-index: -2;
+    right: 20px;
+    width: 550px;
+    height: 100%;
+    content: '';
+    background: url(./img/form-girl.png) top right 5px no-repeat;
+    background-size: 86%;
+}

@@ -1,0 +1,150 @@
+/* Задание
+Создайте приложение по следующему макету. На странице должна быть отображена карта. На карте реализуйте 4-5 точек, с городами.При загрузке страницы –каждая точка города пульсирует цветом.При наведении –пульсация останавливается, и выводится маленькое окошко, предлагающее купить билеты. При отведении мышки –окошко прячется.Для остановки анимации используйте свойство: animation-play-state */
+
+.map {
+  background-image: url(../images/europe-map.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 750px;
+  /* position: relative; */
+  width: 800px;
+}
+
+.point {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 100%;
+  position: absolute;
+  animation: to-pulse 1.0s infinite;
+}
+
+@keyframes to-pulse {
+  0% {
+    transform: scale(0);
+    width: 0px;
+    height: 0px;
+  }
+
+  10% {
+    transform: scale(0.1);
+  }
+
+  20% {
+    transform: scale(0.2);
+  }
+
+  30% {
+    transform: scale(0.3);
+  }
+
+  40% {
+    transform: scale(0.4);
+  }
+
+  50% {
+    transform: scale(0.5);
+  }
+
+  60% {
+    transform: scale(0.6);
+  }
+
+  70% {
+    transform: scale(0.7);
+  }
+
+  80% {
+    transform: scale(0.8);
+  }
+
+  90% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+.point-1 {
+  top: 620px;
+  left: 130px;
+}
+
+.point-2 {
+  top: 410px;
+  left: 230px;
+}
+
+.point-3 {
+  top: 465px;
+  left: 255px;
+}
+
+.point-4 {
+  top: 400px;
+  left: 395px;
+}
+
+.point-5 {
+  top: 610px;
+  left: 390px;
+}
+
+.city-1:hover .text-1,
+.city-2:hover .text-2,
+.city-3:hover .text-3,
+.city-4:hover .text-4,
+.city-5:hover .text-5 {
+  display: block;
+}
+
+.city-1:hover .point-1,
+.city-2:hover .point-2,
+.city-3:hover .point-3,
+.city-4:hover .point-4,
+.city-5:hover .point-5 {
+  animation-play-state: paused;
+}
+
+.text {
+  position: absolute;
+  background-color: rgb(252, 138, 138);
+  border-radius: 10px;
+  padding: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.text-1 {
+  top: 560px;
+  left: 150px; 
+  display: none;
+}
+
+.text-2 {
+  top: 340px;
+  left: 120px;
+  display: none;
+}
+
+.text-3 {
+  top: 490px;
+  left: 30px;
+  display: none;
+}
+
+.text-4 {
+  top: 330px;
+  left: 170px;
+  display: none;
+}
+
+.text-5 {
+  top: 550px;
+  left: 410px;
+  display: none;
+}

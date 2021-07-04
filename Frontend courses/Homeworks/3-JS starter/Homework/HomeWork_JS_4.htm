@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        // Домашняя работа
+        // Дополнительное задание
+        // Среднее арифметическое чисел
+        function calculate(a, b, c) {
+            return (a + b + c) / 3;
+        }
+
+        let a = +prompt("Вычисление среднего арифметического чисел А, В и С. Введите число A", "");
+        let b = +prompt("Введите число B", "");
+        let c = +prompt("Введите число C", "");
+
+        let arithMean = calculate(a, b, c);
+        document.write('Среднее арифметическое чисел: ' + '"' + a + '", ' + '"' + b + '", ' + '"' + c + '" ' +
+            ' равно ' + arithMean + "<hr>");
+
+        // Задание 1
+        // Калькулятор 1
+        function add(x, y) {
+            return x + y;
+        }
+
+        function sub(x, y) {
+            return x - y;
+        }
+
+        function mul(x, y) {
+            return x * y;
+        }
+
+        function div(x, y) {
+            return x / y;
+        }
+
+        let x = +prompt("Калькулятор: введите число X", "");
+        let sign = prompt("Введите математическое действие", "");
+        let y = +prompt("Введите число Y", "");
+
+        let resultAdd = add(x, y);
+        let resultSub = sub(x, y);
+        let resultMul = mul(x, y);
+        let resultDiv = div(x, y);
+
+        if (x > Number.NEGATIVE_INFINITY && x < Number.POSITIVE_INFINITY && y > Number.NEGATIVE_INFINITY && y < Number
+            .POSITIVE_INFINITY) {
+            if (sign == "+") {
+                document.write("Калькулятор: " + x + " + " + y + " = " + resultAdd + "<hr>");
+            } else if (sign == "-") {
+                document.write("Калькулятор: " + x + " - " + y + " = " + resultSub + "<hr>");
+            } else if (sign == "*") {
+                document.write("Калькулятор: " + x + " * " + y + " = " + resultMul + "<hr>");
+            } else if (sign == "/") {
+                if (y == 0) {
+                    document.write('OOPS! Делить на "0" нельзя' + "<hr>");
+                } else {
+                    document.write("Калькулятор: " + x + " / " + y + " = " + resultDiv + "<hr>");
+                }
+            } else {
+                document.write("Вы ввели несуществующее математическое действие" + "<hr>");
+            }
+
+        } else {
+            document.write("OOPS! Вы ввели не числа" + "<hr>");
+        }
+
+        // Калькулятор 2
+        let calculator = {
+            sum() {
+                return this.a + this.b;
+            },
+
+            mul() {
+                return this.a * this.b;
+            },
+
+            read() {
+                this.a = +prompt('a?', 0);
+                this.b = +prompt('b?', 0);
+            }
+        };
+
+        calculator.read();
+        alert(calculator.sum());
+        alert(calculator.mul());
+
+        // Задание 2
+        // Определение знака числа
+        function isSign(i) {
+            if (i > Number.NEGATIVE_INFINITY && i < Number.POSITIVE_INFINITY) {
+                if (i < 0) {
+                    document.write('"' + i + '"' + ' -  это отрицательное' + ",");
+                } else if (i > 0) {
+                    document.write('"' + i + '"' + ' -  это положительное' + ",");
+                } else {
+                    document.write('Вы ввели "0" - это');
+                }
+            } else {
+                document.write('OOPS! Вы ввели не числа')
+            }
+        }
+        // Проверка простое число или составное
+        function isPrime(i) {
+            if (i > Number.NEGATIVE_INFINITY && i < Number.POSITIVE_INFINITY) {
+                if (i < 2) {
+                    document.write(' не простое число (простое число должно быть больше 1)')
+                } else if (i == 2) {
+                    document.write(' простое число')
+                } else {
+                    for (let j = 2; j < i; j++) {
+                        if (i % j == 0) {
+                            return document.write(' составное число');
+                        }
+                    }
+                    document.write(' простое число')
+                }
+            }
+        }
+        // Проверка на деление без остатка на 2, 3, 5, 6, 9
+        function checkDivBy(i) {
+            if (i > Number.NEGATIVE_INFINITY && i < Number.POSITIVE_INFINITY) {
+
+                if (i == 0) {} else {
+                    if (i % 2 == 0 || i % 3 == 0 || i % 5 == 0 || i % 6 == 0 || i % 9 == 0) {
+                        document.write(', делится без остатка на: ')
+                        if (i % 2 == 0) {
+                            document.write('2, ');
+                        }
+                        if (i % 3 == 0) {
+                            document.write('3, ');
+                        }
+                        if (i % 5 == 0) {
+                            document.write('5, ');
+                        }
+                        if (i % 6 == 0) {
+                            document.write('6, ');
+                        }
+                        if (i % 9 == 0) {
+                            document.write('9, ');
+                        }
+                    } else {
+                        document.write(', не делится без остатка на: 2, 3, 5, 6, 9');
+                    }
+                }
+            }
+        }
+
+        let i = +prompt("Проверка числа. Введите число", "");
+        isSign(i);
+        isPrime(i);
+        checkDivBy(i);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

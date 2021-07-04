@@ -1,0 +1,176 @@
+/* header {
+  background-image: url(../images/HeaderBG.png);
+  background-repeat: no-repeat;
+} */
+
+.header-h-xl {
+  background-image: url(../images/HeaderBG.png);
+  background-repeat: no-repeat;
+  height: 876px;
+}
+
+.header-h-lg {
+  background-image: url(../images/HeaderBG-lg.png);
+  background-repeat: no-repeat;
+  height: 780px;
+}
+
+.header-h-md {
+  background-image: url(../images/HeaderBG-md.png);
+  background-repeat: no-repeat;
+  height: 630px;
+}
+
+.header-h-sm {
+  background-image: url(../images/HeaderBG-sm.png);
+  background-repeat: no-repeat;
+  height: 460px;
+}
+
+.header-h-xs {
+  background-image: url(../images/HeaderBG-xs.png);
+  background-repeat: no-repeat;
+  height: 330px;
+}
+
+.travelly {
+  font-size: 38px;
+  padding-left: 12px;
+}
+
+.travelly-md {
+  font-size: 30px;
+  padding-left: 12px;
+}
+
+.travelly-sm {
+  font-size: 28px;
+  padding-left: 12px;
+}
+
+.travelly-xs {
+  font-size: 26px;
+  padding-left: 12px;
+}
+
+.plane {
+  position: relative;
+  top: -5px;
+}
+
+.plane-md {
+  position: relative;
+  top: -3px;
+}
+
+.plane-sm {
+  position: relative;
+  top: -3px;
+}
+
+.plane-xs {
+  position: relative;
+  top: -2px;
+}
+
+
+.list-nav {
+  font-size: 18px;
+  padding-top: 5px;
+}
+
+.header-text-md {
+  font-size: 45px;
+}
+
+.header-text-sm {
+  font-size: 38px;
+}
+
+.header-text-xs {
+  font-size: 30px;
+}
+
+.prl-main-xl {
+  padding-left: 8vw;
+  padding-right: 8vw;
+}
+
+.prl-main-lg {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.prl-main-md {
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+.prl-main-sm {
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.prl-main-xs {
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.text-center-xl {
+  margin-top: 250px;
+}
+
+.text-center-lg {
+  margin-top: 200px;
+}
+
+.text-center-md {
+  margin-top: 120px;
+}
+
+.text-center-sm {
+  margin-top: 50px;
+}
+
+.text-center-xs {
+  margin-top: 10px;
+}
+
+.cards-xl {
+  height: 350px;
+}
+
+.cards-lg {
+  height: 340px;
+}
+
+.cards-md {
+  height: 390px;
+}
+
+.cards-sm {
+  height: 350px;
+}
+
+.cards-xl {
+  height: 400px;
+}
+
+.bg-light-gray {
+  background-color: rgb(233, 229, 229);
+}
+
+.text-overlay {
+  text-align: right;
+  position: relative;
+  top: -50px;
+  color: rgb(233, 229, 229);
+}
+
+.copy-footer {
+  font-size: 13px;
+}
+
+.copy-footer-sm {
+  font-size: 12px;
+}

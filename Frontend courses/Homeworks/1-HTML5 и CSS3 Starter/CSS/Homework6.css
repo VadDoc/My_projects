@@ -1,0 +1,149 @@
+body {
+  margin: 15px;
+  padding: 0;
+  background-color: rgb(238, 238, 238);
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: rgb(85, 85, 85);
+}
+
+section h3 {
+  padding: 20px 0 20px 40px
+}
+
+aside h3 {
+  padding: 20px 0 0 60px
+}
+
+header {
+  height: 150px;
+  background-color: rgb(85, 85, 85);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 9rem;
+  font-weight: bold;
+  color: rgb(238, 238, 238);
+  text-align: center;
+}
+
+footer {
+  height: 100px;
+  background-color: grey;
+}
+
+nav,
+section,
+aside {
+  height: 600px;
+  float: left;
+}
+
+nav,
+aside {
+  width: 200px;
+  background-color: rgb(238, 238, 238);
+}
+
+section {
+  width: 590px;
+  background-color: rgb(238, 238, 238);
+  border-left: 5px double grey;
+  border-right: 5px double grey;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .9rem;
+  text-align: justify;
+}
+
+div.page::after {
+  content: " page";
+}
+
+.conteiner {
+  width: 1000px;
+  height: 850px;
+  margin: auto;
+  font-size: 1.4em;
+}
+
+.section {
+  padding-left: 50px;
+}
+
+.aside {
+  padding-left: 12px;
+}
+
+
+.menu a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+}
+
+.menu li {
+  height: 62px;
+  list-style-type: none;
+  padding: 28px 0 0 45px;
+}
+
+.menu li:hover {
+  background-color: grey;
+  color: rgb(238, 238, 238);
+  border-radius: 30px;
+}
+
+.menu a:hover {
+  color: rgb(238, 238, 238);
+}
+
+
+.menu ul {
+  padding: 10px 10px 0 0px;
+}
+
+.page {
+  width: 140px;
+  height: 60px;
+}
+
+.contact-ft {
+  float: left;
+}
+
+.contact-ft a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  color: rgb(238, 238, 238);
+  text-decoration: none;
+}
+
+.contact-ft ul {
+  margin: 0;
+  padding: 25px 100px;
+  list-style-type: none;
+}
+
+.contact-ft a:hover {
+  padding-left: 20px;
+  transition: linear .3s;
+}
+
+.copy-ft {
+  float: right;
+  padding: 35px 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  color: rgb(238, 238, 238);
+}
+
+span:hover {
+  font-style: italic;
+}

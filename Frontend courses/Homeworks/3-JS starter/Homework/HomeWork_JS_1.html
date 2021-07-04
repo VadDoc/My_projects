@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // Классная работа
+    var a = 8;
+    var b = 4;
+    var result;
+
+    result = a + b;
+    document.write("a + b = " + result + "<br>");
+
+    result = a - b;
+    document.write("a - b = " + result + "<br>");
+
+    result = a * b;
+    document.write("a * b = " + result + "<br>");
+
+    result = a / b;
+    document.write("a / b = " + result + "<hr>");
+
+    // Домашняя работа
+    // Задание 2
+    var x = 6;
+    var y = 15;
+    var z = 4;
+
+    x += y - x++ * z;
+    document.write("x += y - x++ * z = " + x + "<br>");
+
+    z = --x - y * 5;
+    document.write("z = --x - y * 5 = " + z + "<br>");
+
+    y /= x + 5 % z;
+    document.write("y /= x + 5 % z = " + y + "<br>");
+
+    z = x++ + y * 5;
+    document.write("z = x++ + y * 5 = " + z + "<br>");
+
+    x = y - x++ * z;
+    document.write("x = y - x++ * z = " + x + "<hr>");
+
+    // Задание 3
+    var firstNumber = prompt("Введите первое число", "");
+    var secondNumber = prompt("Введите второе число", "");
+    var thirdNumber = prompt("Введите третье число", "");
+    var result = (+firstNumber + +secondNumber + +thirdNumber) / 3;
+    document.write("Среднее арифметическо введеных чисел = " + result + "<hr>")
+
+    // Задание 4
+    var r = prompt("Введите радиус цилиндра");
+    var h = prompt("Ведите высоту цилиндра");
+    var s = 2 * Math.PI * r * (+r + +h);
+    var v = Math.PI * r ** 2 * h;
+    document.write("Площадь цилиндра = " + s + "<br>");
+    document.write("Объем цилиндра = " + v + "<hr>");
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+.invalid {
+    background-color: rgb(252, 222, 227);
+}
+
+.valid {
+    background-color: rgb(174, 252, 180);
+}
+
+.success {
+    color: green;
+}
+
+.error-mess {
+    text-align: center;
+    color: red;
+}
+
+.anti-spam {
+    display: none;
+}

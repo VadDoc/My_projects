@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/Task 2.js"></script>
+  <!-- <script>
+    window.onload = function () {
+      let xhr = new XMLHttpRequest();
+
+      // настройка объекта запроса с указание метода отправи запроса и данных
+      xhr.open("GET", "CalcHandler.ashx?a=hello&b=world");
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          document.getElementById("output").innerHTML = xhr.responseText;
+        }
+      }
+
+      xhr.send();
+    }
+  </script> -->
+</head>
+
+<body>
+  <form action="get" method="get">
+    <input id='number1' type="text" name="a" placeholder="введи целое число">
+    <input id='number2' type="text" name="b" placeholder="введи целое число">
+    <input type="submit" value="Отправить" name="submit">
+  </form>
+
+</body>
+
+</html>

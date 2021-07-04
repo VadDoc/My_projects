@@ -1,0 +1,6 @@
+body {
+    /* background: Whitesmoke  url(your-background.jpg) !important; */
+    background: url(./images/bg.png) rgb(251, 251, 236) top center no-repeat !important;
+
+    background-size: cover !important;
+  }

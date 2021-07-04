@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .visit-card {
+      width: 280px;
+      background-color: rgb(214, 227, 238);
+      padding: 50px;
+      margin: 20px;
+      color: rgb(3, 3, 93);
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+    }
+
+    .company {
+      font-size: 1.2em;
+      color: brown;
+      text-align: center;
+    }
+  </style>
+  <script>
+    // Дополнительное задание
+
+    function Box(w, h, d, m) {
+      this.width = w;
+      this.height = h;
+      this.depth = d;
+      this.material = m;
+      this.volume = function () {
+        return this.width * this.height * this.depth;
+      }
+    }
+
+    const boxMetal = new Box(50, 30, 40, "металл");
+    boxMetal.volume();
+    console.log(
+      `Бокс - ширина: ${boxMetal.width}, высота: ${boxMetal.height}, глубина: ${boxMetal.depth},
+      материал: ${boxMetal.material}, объем: ${boxMetal.volume()}.`
+    );
+
+    // Задание 1
+
+    function MyConstructor(a, b) {
+      this.a = a;
+      this.b = b;
+      this.sum = function () {
+        return a + b;
+      }
+    }
+
+    MyConstructor.property = 10;
+    MyConstructor.show = function () {
+      console.log(MyConstructor.property);
+    }
+
+    // Задание 2. Сортировка объектов по возрасту в массиве
+
+    function Human(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+
+    sortByAge = (a, b) => (a.age - b.age);
+
+    const peter = new Human('Peter', 25);
+    const ann = new Human('Ann', 18);
+    const john = new Human('John', 36);
+    const nick = new Human('Nick', 22);
+    const jane = new Human('Jane', 33);
+
+    let myGroup = [peter, ann, john, nick, jane];
+
+    myGroup.sort(sortByAge);
+    console.log(myGroup);
+
+    // Задание 3
+
+    function HumanOurCompany(fname, lname, age, pos, tel, email, addr, photo) {
+      this.firstName = fname;
+      this.lastName = lname;
+      this.age = age;
+      this.position = pos;
+      this.tel = tel;
+      this.email = email;
+      this.address = addr;
+      this.photo = photo;
+      this.printVisitCard = function () {
+        document.write(`<div class="visit-card">
+        <img src="${this.photo}" alt="фото" width="200px">
+        <p class="company">Сотрудник ${HumanOurCompany.nameOurCompany}
+        <p>Фамилия: ${this.firstName}
+        <p>Имя: ${this.lastName}
+        <p>Возраст: ${this.age}
+        <p>Должность: ${this.position}
+        <p>Телефон: ${this.tel}
+        <p>Email: ${this.email}
+        <p>Aдрес: ${this.address}
+        </div> 
+        `)
+      }
+    }
+
+    HumanOurCompany.nameOurCompany = 'ООО "Компания"';
+
+    HumanOurCompany.aboutOurCompany = function () {
+      document.write(`<div class="visit-card">
+        <p class="company">${HumanOurCompany.nameOurCompany}
+        <p>Самая замечательная компания в мире!
+        </div> 
+        `)
+    }
+
+    HumanOurCompany.exampleVisitCard = function () {
+      return new HumanOurCompany('Грей', 'Саша', '32', 'секретарь', '+ХХХХХХХХХХХХ', 'sashagrey@gmail.com',
+        'Лос-Анджелес, Калифорния',
+        'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/797ca088-7123-4d28-a81b-6238bd8a9986/d1ylpsh-0bdd57db-2ba8-477e-b4c7-900fe9611cf5.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi83OTdjYTA4OC03MTIzLTRkMjgtYTgxYi02MjM4YmQ4YTk5ODYvZDF5bHBzaC0wYmRkNTdkYi0yYmE4LTQ3N2UtYjRjNy05MDBmZTk2MTFjZjUuanBnIn1dXX0.IE_UzSG6jmXTzXFfsYp3TueK5TCNY9hw1JYzpZHhw70'
+      );
+    }
+
+    const ivanovIvan = new HumanOurCompany('Страусов', 'Иван', '35', 'менеджер', '+123456789123',
+      'ivanovivan@gmail.com',
+      'г. Киев, ул. Банковая, 11', 'https://kaifolog.ru/uploads/posts/2012-11/thumbs/1352884289_050.jpg');
+
+    ivanovIvan.printVisitCard();
+    HumanOurCompany.aboutOurCompany();
+    HumanOurCompany.exampleVisitCard().printVisitCard();
+
+    // Задание 4. Метод toString()
+
+    function Circle(r, c) {
+      this.radius = r;
+      this.color = c;
+    }
+
+    Circle.prototype.getCircleArea = function () {
+      return `Круг ${this.color}: площадь = ${(Math.PI * this.radius ** 2).toFixed(2)}`;
+    }
+
+    Circle.prototype.getCircleLength = function () {
+      return `Круг ${this.color}: длина окружности = ${(Math.PI * this.radius * 2).toFixed(2)}`;
+    }
+
+
+    Circle.prototype.toString = function () {
+      return `Круг - радиус: ${this.radius}, цвет: ${this.color}`;
+    }
+
+    const circleRed = new Circle(50, 'красный');
+    const circleBlue = new Circle(100, 'синий');
+
+    document.write(`<p> ${circleRed}`);
+    document.write(`<p> ${circleBlue.toString()}`);
+    document.write(`<p> ${circleRed.toString()}`);
+    document.write(`<p> ${circleBlue.getCircleArea()}`);
+    document.write(`<p> ${circleRed.getCircleArea()}`);
+    document.write(`<p> ${circleBlue.getCircleLength()}`);
+    document.write(`<p> ${circleRed.getCircleLength()}`);
+
+
+    circleRed.toString = function () {
+      return `Круг ${this.color} c радиусом = ${this.radius}`;
+    }
+
+    document.write(`<p> ${circleRed.toString()}`);
+    document.write(`<p> ${circleBlue.toString()}`);
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

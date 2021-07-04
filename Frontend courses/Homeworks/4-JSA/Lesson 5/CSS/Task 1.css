@@ -1,0 +1,36 @@
+body {
+  padding-left: 100px;
+}
+
+h1,
+#divResult {
+  width: 230px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+#number1,
+#number2 {
+  width: 222px;
+}
+
+h1 {
+  color: rgb(192, 7, 7);
+}
+
+img {
+  width: 230px;
+  height: 262px;
+  display: none;
+}
+
+input {
+  width: 230px;
+  height: 30px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+}

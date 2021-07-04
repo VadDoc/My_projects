@@ -1,0 +1,17 @@
+.form-box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 10px;
+}
+
+.gender {
+  margin-left: 12px;
+  margin-right: 40px;
+}
+
+.m-t-5 {
+  margin-top: 5px;
+}

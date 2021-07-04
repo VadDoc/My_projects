@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Nanum+Pen+Script" rel="stylesheet">
+    <!-- Разработайте страницу заказа пиццы.  Требования к странице: Можно заказать три вида пиццы – маленькая, большая, средняя.
+    Можно самостоятельно выбрать ингредиенты к пицце – грибы, бекон, помидоры, сыр, оливки. На странице должна вводиться информация 
+    о покупателе (его телефон и адрес доставки). 
+ 
+    Подумайте, какие данные следует проверять на странице, реализуйте эту проверку. Также реализуйте подсчет стоимости пиццы, 
+    при выборе размеров и ингредиентов, автоматически должна пересчитываться сумма заказа. Цены на размер пиццы и 
+    отдельные ингредиенты выберите произвольно. -->
+    <link rel="stylesheet" href="hw_01.css">
+    <script src="pizzaInfo.js">
+    </script>
+</head>
+<body>
+    <img class="backgroundImg" src="pizza21.jpg" alt="pizza">    
+    <div class="body">
+        <div class="content">
+            <fieldset class="orderFieldset">
+                <form action="#" method="GET" name="pizzaForm">
+                    <div class="column">
+                        <label class="bigLabel" for="pizza">Choose pizza</label>
+                        <select name="pizza">
+                            <option value="choose">Choose...</option>
+                            <option value="texas">Texas ($25)</option>
+                            <option value="barbecue">Brbecue ($15)</option>
+                            <option value="carbonara">Carbonara ($35)</option>
+                            <option value="bavarian">Bavarian ($30)</option>
+                            <option value="provence">Provence ($20)</option>
+                        </select>
+                        <label class="bigLabel">Add topping</label>
+                        <p>
+                            <input class="toppingClass" type="checkbox" name="mozzarella" disabled>
+                            <label>Mozzarellac ($2)</label>
+                        </p>                    
+                        <p>
+                            <input class="toppingClass" type="checkbox" name="mushrooms" disabled>
+                            <label>Mushrooms ($1)</label>
+                        </p>                    
+                        <p>
+                            <input class="toppingClass" type="checkbox" name="ham" disabled>
+                            <label>Ham ($3)</label>
+                        </p>                    
+                        <p>
+                            <input class="toppingClass" type="checkbox" name="pepperoni" disabled>
+                            <label>Pepperoni ($4)</label>
+                        </p>                    
+                        <p>
+                            <input class="toppingClass" type="checkbox" name="sausage" disabled>
+                            <label>Sausage ($3)</label>
+                        </p>                    
+                        <p>
+                            <input class="toppingClass" type="checkbox" name="bacon" disabled>
+                            <label>Bacon ($5)</label>
+                        </p>                    
+                        <p>
+                            <input class="toppingClass" type="checkbox" name="blackOlives" disabled>
+                            <label>Black olives ($4)</label>
+                        </p>                    
+                        <p>
+                            <input class="toppingClass" type="checkbox" name="greenPeppers" disabled>
+                            <label>Green peppers ($2)</label>
+                        </p>                    
+                    </div>
+                    <div class="column">
+                        <label class="bigLabel">Choose the size</label>
+                        <p>
+                            <input type="radio" name="pizzaSize" value="Small" disabled />
+                            <label id="pizzaSizeSmall">Small</label>
+                            <input type="radio" name="pizzaSize" value="Medium" disabled />
+                            <label id="pizzaSizeMedium">Medium</label>
+                            <input type="radio" name="pizzaSize" value="Big" disabled/>
+                            <label id="pizzaSizeBig">Big</label>
+                        </p>
+                        <label class="bigLabel" for="quantity">Quantity</label>
+                        <select name="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                        <p>
+                            <label class="smallLabel">Name</label>
+                            <input type="text" name="clientNname" data-value="\b[a-zA-Z]+\b" data-error-message="Not allowed name!" required>
+                        </p>                    
+                        <p>
+                            <label class="smallLabel">Phone</label>
+                            <input type="text" name="clientPhone" data-value="\b[0-9-()]+\b" data-error-message="Phone should be a numbers!" required>
+                        </p>                    
+                        <p>
+                            <label class="smallLabel">Address</label>
+                            <input type="text" name="clientAddress" data-value="\b[a-zA-Z0-9._-,]+\b" data-error-message="Not allowed address!" required>
+                        </p> 
+                        <button type="submit">Submit</button>                   
+                    </div>
+                    <p class="message" id="myMessage"></p>
+                </form>
+            </fieldset>
+            <fieldset class="orderInfoFieldset">
+                <legend>Order info:</legend>
+                <p id="name"></p>
+                <p id="phone"></p>
+                <p id="address"></p>
+                <p id="orderSum"></p>
+            </fieldset> 
+        </div>
+    </div>
+</body>
+</html>

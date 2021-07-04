@@ -1,0 +1,128 @@
+.mainContacts{
+    position: relative;
+    background: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .form {
+        width: 50%;
+        padding: 65px 95px 65px 85px;
+        box-shadow: 0 11px 65px rgba(20, 34, 143, 0.13);
+        border-radius: 35px;
+        position: relative;
+    
+        h3 {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        >p {
+            margin-bottom: 33px;
+            color: #8a91a8;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .btn {
+            box-shadow: 0 11px 57px rgba(0, 0, 0, 0.15);
+            width: 330px;
+            height: 80px;
+            border: solid 1px orange;
+            border-radius: 40px;
+            background-color: orange;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: ease .4s all;
+        }
+        
+        .btn:hover {
+            color: white;
+            background-color: rgb(48, 243, 233);
+            border: solid 1px rgb(48, 243, 233);
+            cursor: pointer;
+        }
+        
+        .serverMessage {
+            text-align: center;
+            color: red;
+        }
+        
+    }
+
+    .wrap {
+        margin-bottom: 40px;
+        padding: 20px 20px;
+        box-shadow: inset 0 0 8px 2px rgba(219, 232, 255, 0.15);
+        border-radius: 15px;
+        border: 1px solid #dee4f2;
+
+        .img {
+            width: 17%;
+            justify-content: center;
+            align-items: center;        
+        }
+
+        .input {
+            width: 83%;
+            justify-content: space-between;
+            flex-direction: column;
+            
+            label {
+                font-size: .9rem;
+                font-weight: bold;
+            }
+
+            input {
+                margin-top: 20px;
+                font-size: 1.1rem;
+                border: 0;
+            }
+        }
+    }
+
+    .contacts {
+        width: 50%;
+        padding: 90px 90px 0;
+
+        h2 {
+            padding-bottom: 50px;
+            font-size: 2.5rem;        
+        }
+
+        li {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #8a91a8;
+        }
+        
+        a {
+            color: #595f70;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        div {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #8a91a8;
+        }
+        
+        div img,
+        span {
+            margin-top: 10px;
+            color: #8a91a8;
+        }
+        
+        li img {
+            position: absolute;
+            top: 40px;
+            left: -30px;
+        }
+        
+    }
+}
+

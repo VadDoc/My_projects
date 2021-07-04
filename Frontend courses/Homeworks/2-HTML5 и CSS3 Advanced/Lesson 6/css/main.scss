@@ -1,0 +1,16 @@
+$size: 100px;
+
+.div1 {
+  background-color: blue;
+  height: $size*3;
+
+  p {
+    background-color: green;
+    height: $size;
+  }
+}
+
+.div2 {
+  background-color: red;
+  height: $size*3;
+}

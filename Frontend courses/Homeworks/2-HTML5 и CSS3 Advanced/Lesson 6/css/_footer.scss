@@ -1,0 +1,12 @@
+﻿$font-footer-size: 40px;
+
+footer {
+    width:100%;
+    // height: $size-100;
+    background-color: darken($color-gray, 20%);
+    text-align: center;
+    padding-top: $size-10*2;
+    padding-bottom: $size-10*2;
+    font-size: $font-footer-size;
+    color: $color-white;
+}

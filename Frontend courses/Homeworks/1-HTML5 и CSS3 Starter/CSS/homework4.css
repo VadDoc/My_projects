@@ -1,0 +1,110 @@
+h2 {
+  font-size: 1.2em;
+  color: rgb(149, 243, 243);
+  background-color: rgb(21, 21, 168);
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.font-style1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+.font-style2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-shadow: 5px 3px 2px cadetblue;
+  letter-spacing: 2px;
+}
+
+.font-style3 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.8em;
+  color: blue;
+}
+
+.font-style4::first-letter {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: red;
+}
+
+p::before {
+  content: "Шрифт ";
+}
+
+ul li {
+  width: 100px;
+  height: 20px;
+  font-weight: bold;
+  color: bisque;
+  vertical-align: 50%;
+  padding: 5px 20px;
+  margin: 5px 5px 5px -40px;
+  background-color: green;
+  border-left: 20px solid red;
+  border-radius: 20px;
+  list-style-type: none;
+
+}
+
+li:hover {
+  color: white;
+  padding: 5px 20px 5px 10px;
+  font-size: 1.2em;
+  border-left: 30px solid red;
+  transition: linear .3s;
+}
+
+li::before {
+  content: "Строка ";
+}
+
+table {
+  width: 500px;
+  color: navy;
+  background-color: rgb(215, 241, 241);
+  border-collapse: collapse;
+  border-radius: 10px;
+}
+
+caption {
+  caption-side: bottom;
+  text-align: right;
+  color: black;
+}
+
+tfoot {
+  font-weight: bold;
+}
+
+th,
+td {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 5px 10px 5px 20px;
+}
+
+th {
+  color: white;
+  background-color: navy;
+  border-bottom: 3px solid white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgb(149, 243, 243);
+}
+
+tbody td,
+tfoot td {
+  border-left: 1px solid white;
+}
+
+tfoot td:first-child {
+  padding-left: 50px;
+}
+

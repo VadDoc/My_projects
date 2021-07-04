@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/Sport club.css">
+</head>
+
+<body>
+
+  <!-- Добрый день! Сайт сделал, вроде все получилось. Немного повозился с отступами, чтобы при схлопывании оставались одинаковые расстояния между элементами по высоте. Увеличил высоту карточек, в сравнении с образцом, т.к. при схлопывании текст выходил за рамку (картинка увеличивается до ширины экрана и вытесняет по вертикале текст). Попробовал установить min-height: при схлопывании у соседних элементов нижняя граница находилась на разном уровне из-за разницы содержимого контента. Решил просто немного увеличить высоту карточек, чтобы содержимое оставалось в пределах рамок. Сделал брейкпоинты на карточки, портофолио и еще два элемента ниже. -->
+
+
+  <header> 
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+            <div class="container">
+              <a class="navbar-brand" href="#">Sport club</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                  <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Portofolio</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Portofolio 1</a>
+                      <a class="dropdown-item" href="#">Portofolio 2</a>
+                      <a class="dropdown-item" href="#">Portofolio 3</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Other Pages </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Page 1</a>
+                      <a class="dropdown-item" href="#">Page 2</a>
+                      <a class="dropdown-item" href="#">Page 3</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-2 pt-5 mr-0">
+      <div class="col-12 pr-0">
+        <div id="carouselMy" class="carousel my-carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="./images/slide_1.jpg">
+              <div class="carousel-caption">
+                <h6>First Slide</h6>
+                <p>This is a discription of the first slide</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="./images/slide_2.png">
+              <div class="carousel-caption">
+                <h6>Second Slide</h6>
+                <p>This is a discription of the second slide</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="./images/slide_3.jpg">
+              <div class="carousel-caption">
+                <h6>Third Slide</h6>
+                <p>This is a discription of the third slide</p>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselMy" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a class="carousel-control-next" href="#carouselMy" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+          <ol class="carousel-indicators">
+            <li data-target="#carouselMy" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselMy" data-slide-to="1"></li>
+            <li data-target="#carouselMy" data-slide-to="2"></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="welcome">Welcome to Sport Club</div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card text-left card-row-one">
+            <div class="card-header">
+              <h4 class="card-title">Card title</h4>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia dignissimos.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card text-left card-row-one">
+            <div class="card-header">
+              <h4 class="card-title">Card title</h4>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia dignissimos,
+                fugit quasi, ex dolor quis placeat quaerat atque eligendi explicabo laudantium quae aliquam consequuntur
+                quas voluptates ut debitis quibusdam.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card text-left card-row-one">
+            <div class="card-header">
+              <h4 class="card-title">Card title</h4>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia dignissimos.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="portofolio">Portofolio Heading</div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 ">
+          <div class="card text-left card-row-portofolio1">
+            <img class="card-img-top" src="./images/children.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title text-primary">One</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, cumque sit voluptas in
+                neque necessitatibus exercitationem suscipit veniam blanditiis, architecto doloremque sequi temporibus
+                consectetur facere assumenda distinctio tenetur.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 ">
+          <div class="card text-left card-row-portofolio1">
+            <img class="card-img-top" src="./images/run.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title text-primary">Two</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, cumque sit voluptas in
+                neque necessitatibus exercitationem suscipit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 ">
+          <div class="card text-left card-row-portofolio1">
+            <img class="card-img-top" src="./images/gym.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title text-primary">Three</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, cumque sit voluptas in
+                neque necessitatibus exercitationem suscipit veniam blanditiis, architecto doloremque sequi temporibus
+                consectetur facere assumenda distinctio tenetur.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 ">
+          <div class="card text-left card-row-portofolio2">
+            <img class="card-img-top" src="./images/snowbord.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title text-primary">Four</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, cumque sit voluptas in
+                neque necessitatibus exercitationem suscipit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 ">
+          <div class="card text-left card-row-portofolio2">
+            <img class="card-img-top" src="./images/run_winter.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title text-primary">Five</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, cumque sit voluptas in
+                neque necessitatibus exercitationem suscipit veniam.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 ">
+          <div class="card text-left card-row-portofolio2">
+            <img class="card-img-top" src="./images/tennis.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title text-primary">Six</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, cumque sit voluptas in
+                neque necessitatibus exercitationem suscipit veniam blanditiis, architecto doloremque sequi temporibus
+                consectetur facere assumenda distinctio tenetur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6 mt-2">
+          <div class="my-sport">My sport</div>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, cumque sit voluptas in
+            neque necessitatibus exercitationem suscipit veniam blanditiis, architecto doloremque sequi temporibus
+            consectetur facere assumenda distinctio tenetur.
+          </p>
+        </div>
+        <div class="col-12 col-sm-6 mt-2">
+          <img class="card-img-top" src="./images/yoga.jpg" alt="Card image cap">
+        </div>
+      </div>
+      <hr class="line">
+      <div class="row">
+        <div class="col-12 col-sm-8 pt-2">
+          <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quam atque vitae
+            reprehenderit labore, doloribus illo, impedit fugiat facilis id laboriosam sequi! Suscipit quae voluptas.
+          </div>
+        </div>
+        <div class="col-12 col-sm-4 pt-2">
+          <button type="button" class="btn btn-block active btn-lg btn-secondary">Learn more</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container-fluid">
+      <div class="row bg-dark footer">
+        <div class="col-12">Copyright &copy; Your Website 2020</div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!------------------------------------------ Javascript ------------------------------------------->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+  <script src="./js/Task 5.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+.mainIndications{
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color: #f5f8ff;
+
+    .title {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        text-align: center;
+        font-size: 1.8rem;
+    
+    }
+
+    .box {
+        margin-left: 10%;
+        margin-right: 10%;
+        border: 2px solid #d4dff9;
+        border-radius: 35px;
+
+        .left,
+        .right {
+            width: 50%;
+            padding: 40px 30px;
+        }
+
+        .left {
+            background-color: white;
+            border-radius: 35px;
+            box-shadow: 0 11px 65px rgba(20, 34, 143, 0.13);
+            margin-left: -2px;
+            margin-top: -2px;
+            margin-bottom: -2px;
+            z-index: 3;
+        }
+
+        .list {
+            color: #8a91a8;
+            font-size: 18px;
+            line-height: 30px;
+            padding: 40px 30px;
+        }
+    }
+
+    .title::after {
+        content: '';
+        position: absolute;
+        top: 240px;
+        left: 30px;
+        width: 350px;
+        height: 540px;
+        background: url(./../img/causes-bg.png) no-repeat;
+        z-index: 0;
+        /* background-size: 950px 640px, 460px, 33% */
+    
+    }
+}
+

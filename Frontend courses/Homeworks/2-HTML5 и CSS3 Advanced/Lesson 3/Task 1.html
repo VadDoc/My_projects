@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/Task 1.css">
+  <script>
+    //=========== Задание 2 ================
+    // С помощью рассмотренных методов – нарисуйте на холсте изображение канадского флага с данного примера
+
+    // Добрый день! Эффект "тени" сделал с помощью метода shadow, не уверен, что правильно, возможно, нужно было использовать gradient. 
+    // Для того чтобы прописать тень, пришлось дублировать граничные линии. Это правильно или есть более короткий способ?
+    // Для искривления "кленового листа", соответсвующего кривой линии флага, прописывал отдельно каждую координату отдельно с необходимым отклонением от симметричности. Можеть есть способ, когда рисуется предмет без перспективы и искривления, а потом, соответственно введенной кривой или перспективе, меняются необходимые координаты предмета и получается необходимый эффект?
+    // Буду благодарен за совет и комментарии.
+
+    window.addEventListener("load", init, false);
+
+    function init() {
+      let canvas = document.getElementById("canvas"),
+        context = canvas.getContext("2d");
+
+      context.beginPath();
+      context.moveTo(50, 100);
+      context.bezierCurveTo(200, 250, 800, -50, 950, 100);
+      context.lineTo(950, 700);
+      context.bezierCurveTo(800, 550, 200, 850, 50, 700);
+      context.fillStyle = "red";
+      context.fill();
+
+      context.clearRect(275, 50, 450, 700);
+      context.closePath();
+
+      context.beginPath();
+      context.moveTo(495, 640);
+      context.lineTo(498, 540);
+      context.lineTo(380, 575);
+      context.lineTo(405, 535);
+      context.lineTo(300, 470);
+      context.lineTo(340, 450);
+      context.lineTo(310, 380);
+      context.lineTo(380, 385);
+      context.lineTo(385, 340);
+      context.lineTo(440, 390);
+      context.lineTo(420, 230);
+      context.lineTo(460, 250);
+      context.lineTo(500, 170);
+      context.lineTo(540, 237);
+      context.lineTo(580, 200);
+      context.lineTo(560, 365);
+      context.lineTo(615, 295);
+      context.lineTo(610, 345);
+      context.lineTo(680, 330);
+      context.lineTo(650, 395);
+      context.lineTo(690, 405);
+      context.lineTo(595, 495);
+      context.lineTo(620, 525);
+      context.lineTo(502, 540);
+      context.lineTo(505, 640);
+      context.fill();
+      context.closePath();
+
+      context.beginPath();
+      context.moveTo(50, 107);
+      context.bezierCurveTo(200, 257, 800, -42, 950, 107);
+      context.strokeStyle = "rgba(160, 159, 159, 0.25)";
+      context.lineWidth = 15;
+      context.shadowColor = "rgba(0, 0, 0, 0.8)";
+      context.shadowOffsetX = 0;
+      context.shadowOffsetY = 10;
+      context.shadowBlur = 15;
+      context.stroke();
+      context.closePath();
+
+      context.beginPath();
+      context.moveTo(950, 695);
+      context.bezierCurveTo(800, 543, 200, 843, 50, 693);
+      context.strokeStyle = "rgba(160, 159, 159, 0.25)";
+      context.lineWidth = 15;
+      context.shadowColor = "rgba(0, 0, 0, 0.8)";
+      context.shadowOffsetX = 0;
+      context.shadowOffsetY = -10;
+      context.shadowBlur = 15;
+      context.stroke();
+      context.closePath();
+
+      context.beginPath();
+      context.moveTo(57, 120);
+      context.lineTo(57, 695);
+      context.strokeStyle = "rgba(160, 159, 159, 0.25)";
+      context.lineWidth = 15;
+      context.shadowColor = "rgba(0, 0, 0, 0.8)";
+      context.shadowOffsetX = 10;
+      context.shadowOffsetY = 0;
+      context.shadowBlur = 15;
+      context.stroke();
+      context.closePath();
+
+      context.beginPath();
+      context.moveTo(943, 105);
+      context.lineTo(943, 680);
+      context.strokeStyle = "rgba(160, 159, 159, 0.25)";
+      context.lineWidth = 15;
+      context.shadowColor = "rgba(0, 0, 0, 0.8)";
+      context.shadowOffsetX = -10;
+      context.shadowOffsetY = 0;
+      context.shadowBlur = 15;
+      context.stroke();
+      context.closePath();
+    }
+  </script>
+  <style>
+    canvas {
+      border: 3px solid black;
+    }
+  </style>
+
+</head>
+
+<body>
+  <canvas id="canvas" height="800" width="1000">
+  </canvas>
+
+</body>
+
+</html>

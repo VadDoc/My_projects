@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/Task 1.css">
+  <script src="./js/Task 1.js"></script>
+</head>
+
+<!-- Задание
+Создать страницу Отели столицы Украины.
+Цель: научиться работать с картами Google, скрывать и отображать карты по нажатию на кнопку -->
+
+<body>
+  <header>Отели столицы Украины</header>
+  <nav>
+    <ul>
+      <li>Хилтон Киев</li>
+      <li>Опера Отель</li>
+      <li>Ривьера Хауз</li>
+      <li>Премьер Палас</li>
+      <li>Контакты</li>
+    </ul>
+  </nav>
+  <section>
+    <div class='hotel'>
+      <div class="title">Хилтон Киев</div>
+      <div class="image"><img src="./images/hilton.jpg" alt=""></div>
+      <div class="button"><input id='btnHilton' type="button" value="Показать на карте"></div>
+      <div class="desc">
+        <p>Отель Хилтон Киев находится в Киеве, 300 метрах от собора Св. Владимира и в 10 минутах ходьбы от Национальной
+          оперы Украины. К услугам гостей фитнес-центр, спа-салон, сауна и современные номера.</p>
+        <p>Центральный вокзал Киева находится в 1,2 км от отеля Hilton Kyiv.</p>
+        <p>Это любимая часть города Киев среди наших гостей согласно независимым отзывам.</p>
+        <p>Парам особенно нравится расположение — они оценили проживание в этом районе для поездки вдвоем на 9,0.</p>
+        <p>Мы говорим на вашем языке!</p>
+      </div>
+      <div id='mapHilton' class="hiden-map"><iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1270.3949071075463!2d30.504238056331772!3d50.44501558149951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef65cf62723%3A0x9a4f96af1f0594fd!2z0LHRg9C7LiDQotCw0YDQsNGB0LAg0KjQtdCy0YfQtdC90LrQviwgMzAsINCa0LjQtdCyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1592829887041!5m2!1sru!2sua"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe></div>
+    </div>
+
+    <div class='hotel'>
+      <div class="title">Опера Отель</div>
+      <div class="image"><img src="./images/opera.jpg" alt=""></div>
+      <div class="button"><input id='btnOpera' type="button" value="Показать на карте"></div>
+      <div class="desc">
+        <p>Почувствуйте себя знаменитостью благодаря великолепному сервису в Опера Отель
+          Один из лучших вариантов, выбранных нами в городе Киев.
+        </p>
+        <p>Отель «Опера» находится всего в 10 минутах ходьбы от Владимирского собора и здания Национальной оперы. В 20
+          минутах ходьбы от отеля расположен Софийский собор.</p>
+        <p>Это любимая часть города Киев среди наших гостей согласно независимым отзывам.</p>
+        <p>Парам особенно нравится расположение — они оценили проживание в этом районе для поездки вдвоем на 9,0.</p>
+        <p>Мы говорим на вашем языке!</p>
+      </div>
+      <div id='mapOpera' class="hiden-map"><iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.630834262514!2d30.497804015147214!3d50.44797659542504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef5702c7d89%3A0x280495195cd8c34a!2z0YPQuy4g0JHQvtCz0LTQsNC90LAg0KXQvNC10LvRjNC90LjRhtC60L7Qs9C-LCA1Mywg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1592839890812!5m2!1sru!2sua"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe></div>
+    </div>
+
+    <div class='hotel'>
+      <div class="title">Ривьера Хауз</div>
+      <div class="image"><img src="./images/riviera.jpg" alt=""></div>
+      <div class="button"><input id='btnRiviera' type="button" value="Показать на карте"></div>
+      <div class="desc">
+        <p>Отель Ривьера Хауз с рестораном паназиатской кухни находится в Киеве, в 400 метрах от Михайловского
+          Златоверхого монастыря. </p>
+        <p>Номера оснащены телевизором. В собственной ванной комнате предоставляются бесплатные туалетно-косметические
+          принадлежности. </p>
+        <p>Из всех номеров открывается вид на реку Днепр или район Подол.</p>
+        <p>Расстояние до спортивного комплекса «Олимпийский» составляет 2,9 км.</p>
+        <p>Мы говорим на вашем языке!</p>
+      </div>
+      <div id='mapRiviera' class="hiden-map"><iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.040356707071!2d30.521933815626813!3d50.45897317947647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce46800d66d7%3A0x3752ed552f9e13fa!2z0YPQuy4g0J_QtdGC0YDQsCDQodCw0LPQsNC50LTQsNGH0L3QvtCz0L4sIDE1LCDQmtC40LXQsiwgMDQwNzA!5e0!3m2!1sru!2sua!4v1592881457528!5m2!1sru!2sua"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe></div>
+    </div>
+
+    <div class='hotel'>
+      <div class="title">Премьер Палас</div>
+      <div class="image"><img src="./images/premier.jpg" alt=""></div>
+      <div class="button"><input id='btnPremier' type="button" value="Показать на карте"></div>
+      <div class="desc">
+        <p>В этом 5-звездочном отеле гостей ожидают роскошные номера, бесплатный WiFi и элегантный плавательный бассейн
+          со стеклянным потолком. Отель находится в самом сердце Киева, в 100 метрах от Бессарабского рынка.</p>
+        <p>В просторных номерах и люксах отеля «Премьер Палас» интерьер оформлен в классическом стиле и установлен
+          телевизор с плоским экраном. В ванне комнатах предоставляются халаты и роскошные туалетно-косметические
+          принадлежности.</p>
+        <p>Отель окружен музеями, магазинами и ресторанами. Всего в 300 метрах находятся станции метро «Театральная» и
+          «Площадь Льва Толстого», от которых можно доехать до всех частей Киева.</p>
+        <p>Мы говорим на вашем языке!</p>
+      </div>
+      <div id='mapPremier' class="hiden-map"><iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.9325730480937!2d30.51598661562627!3d50.442356579474286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C7LiDQotCw0YDQsNGB0LAg0KjQtdCy0YfQtdC90LrQviwgNSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1592881306863!5m2!1sru!2sua"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe></div>
+    </div>
+
+
+  </section>
+  <footer>&copy; 2021 Copyright Kyiv hotels, Inc. All rights reserved.</footer>

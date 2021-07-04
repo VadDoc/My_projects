@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // Функция фильтра массива по типу данных
+    /*
+    Написать функцию filterBy(), которая будет принимать в себя 2 аргумента. 
+    Первый аргумент - массив, который будет содержать в себе любые данные, второй аргумент - тип данных. 
+    Функция должна вернуть новый массив, который будет содержать в себе все данные, 
+    которые были переданы в аргумент, за исключением тех, тип которых был передан вторым аргументом. 
+    То есть, если передать массив ['hello', 'world', 23, '23', null], 
+    и вторым аргументом передать 'string', то функция вернет массив [23, null].
+    */
+
+
+    function filterBy(arr, type) {
+      let createArr = [];
+      for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] !== type) {
+          createArr = createArr.concat(arr[i]);
+        }
+      }
+      console.log(createArr)
+      for (let j = 0; j < createArr.length; j++) {
+        document.write(createArr[j] + ", ");
+      }
+    }
+
+    filterBy(['hello', 'world', 23, '23', null], 'string')
+  </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

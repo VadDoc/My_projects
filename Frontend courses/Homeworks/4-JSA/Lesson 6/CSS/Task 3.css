@@ -1,0 +1,13 @@
+input {
+  width: 160px;
+  height: 80px;
+  position: relative;
+  font-size: 1.2em;
+}
+
+div {
+  padding: 10px;
+  position: absolute;
+  top: 280px;
+  left: 600px;
+}

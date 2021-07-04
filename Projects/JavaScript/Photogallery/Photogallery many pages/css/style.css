@@ -1,0 +1,120 @@
+ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+.gallery-menu ul {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    font-weight: bold;
+}
+
+.gallery-menu ul li {
+    background-color: grey;
+    color: white;
+    padding: 10px 40px;
+    cursor: pointer;
+    border: solid 1px grey;
+}
+
+.gallery-menu ul li:hover {
+    background-color: white;
+    color: grey;
+}
+
+.gallery-preview-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-preview-container img {
+    width: 250px;
+    height: 150px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+  
+  .gallery-slider {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gallery-slider-wrapper {
+    display: flex;
+    transition: transform 0.6s ease;
+    height: 500px;
+  }
+  
+  .gallery-slider-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-slider-item>img {
+    /* width: 100%;
+    height: 20vw; */
+    height: 80%;
+  }
+
+  
+  .gallery-slider-control {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+    height: 50px;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, .5);
+  }
+  
+  .gallery-slider-control:hover,
+  .gallery-slider-control:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: .9;
+  }
+  
+  .gallery-slider-control-left {
+    left: 0;
+  }
+  
+  .gallery-slider-control-right {
+    right: 0;
+  }
+  
+  .gallery-slider-control::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  }
+  
+  .gallery-slider-control-left::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  }
+  
+  .gallery-slider-control-right::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  }
+  
+  
+  
+  

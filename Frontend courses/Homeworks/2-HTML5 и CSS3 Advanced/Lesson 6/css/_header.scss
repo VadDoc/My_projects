@@ -1,0 +1,13 @@
+﻿/*Добавление собственной переменной*/
+$font-header-size: 50px;
+
+header {
+    width:100%;
+    background-color: darken($color-gray, 30%);
+    text-align: center;
+    padding-top: $size-10*3;
+    padding-bottom: $size-10*3;
+    font-size: $font-header-size;
+    color: $color-white;
+    font-weight: bold;
+}

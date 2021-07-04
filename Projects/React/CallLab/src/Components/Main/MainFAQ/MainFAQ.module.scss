@@ -1,0 +1,94 @@
+.mainFAQ{
+    background-color: #fafcff;
+    padding-bottom: 100px;
+    position: relative;
+
+    .title {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        padding-top: 100px;
+        text-align: center;
+        font-size: 1.8rem;    
+    }
+
+    .title::after {
+        content: '';
+        position: absolute;
+        top: 140px;
+        right: 0px;
+        width: 650px;
+        height: 980px;
+        background: url(./../img/eclipse-header-1.png) no-repeat;
+        z-index: 0;
+    
+    }
+
+    // .box {}
+
+    .box::after {
+        content: '';
+        position: absolute;
+        top: 400px;
+        left: -400px;
+        width: 700px;
+        height: 700px;
+        background: url(./../img/eclipse-questions-2.png) no-repeat;
+        z-index: 0;
+    
+    }
+
+    .elem {
+        background-color: white;
+        border: 0;
+        position: relative;
+        padding-left: 45px;
+        padding-right: 45px;
+        padding-bottom: 10px;
+        box-shadow: 0 11px 65px rgba(20, 34, 143, 0.13);
+        margin-bottom: 30px;
+        border-radius: 35px !important;
+        z-index: 33;
+
+        .question {
+            position: relative;
+            /* justify-content: space-between; */
+            padding: 20px 35px 10px 0px;
+            font-size: 1.4rem;
+            font-weight: bold;
+
+            .arrow {
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 15px;
+                right: 0px;
+                width: 35px;
+                height: 35px;
+                background-color: rgb(240, 240, 240);
+                border-radius: 50%;
+            }
+        }
+        
+        .question:hover {
+            cursor: pointer;
+        }
+        
+        .answer {
+            // display: none;
+            box-shadow: inset 0 0 20px 1px rgba(195, 195, 248, 0.04);
+            border-radius: 20px;
+            background-color: #f8f8ff;
+            padding: 37px 49px 37px 65px;
+            margin-bottom: 40px;
+            position: relative;
+            color: #8a91a8;
+            font-size: 18px;
+            line-height: 29px;
+            margin-top: 20px
+        }
+        
+    }
+    
+    
+}
+

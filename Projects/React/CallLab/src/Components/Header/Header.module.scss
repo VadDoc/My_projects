@@ -1,0 +1,28 @@
+.header {
+    width: 100%;
+    background: url(../../img/eclipse-header-1.png) top -120px left -70px no-repeat,
+        url(../../img/eclipse-header-2.png) top 400px right -30px no-repeat,
+        url(../../img/eclipse-header-3.png) top 40px right -60px no-repeat;
+    background-size: 1400px 1400px, 530px, 20%
+}
+
+@media (max-width: 1450px) {
+    .header {
+        width: 100%;
+        background: url(../../img/eclipse-header-1.png) top -120px left -105px no-repeat,
+            url(../../img/eclipse-header-2.png) top 400px right -30px no-repeat,
+            url(../../img/eclipse-header-3.png) top 40px right -60px no-repeat;
+        background-size: 1000px 1000px, 530px, 20%
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .header {
+        width: 100%;
+        background: url(../../img/eclipse-header-1.png) top -120px left -105px no-repeat,
+            url(../../img/eclipse-header-3.png) top 40px right -60px no-repeat;
+        background-size: 1000px 976px, 530px, 20%
+    }
+
+}

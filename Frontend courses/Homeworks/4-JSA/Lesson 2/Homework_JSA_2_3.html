@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // Вариант 1 (по условию задачи правильный этот вариант)
+    // window.onload = () => {
+    //   const paragraph = document.getElementsByTagName('p');
+    //   const div = document.getElementsByTagName('div');
+    //   const input = document.getElementsByTagName('input');
+
+    //   paragraph.setRedButton = (newNameClass) => {
+    //     for (i = 0; i < paragraph.length; i++) {
+    //       paragraph[i].className = newNameClass;
+    //     }
+    //   }
+
+    //   div.setRedButton = (newNameClass) => {
+    //     for (i = 0; i < div.length; i++) {
+    //       div[i].className = newNameClass;
+    //     }
+    //   }
+
+    //   input.setRedButton = (newNameClass) => {
+    //     for (i = 0; i < input.length; i++) {
+    //       input[i].className = newNameClass;
+    //     }
+    //   }
+
+    //   paragraph.setRedButton('redButton');
+    //   div.setRedButton('blueButton');
+    //   input.setRedButton('greenButton');
+
+    //   console.log(paragraph[0].className);
+    //   console.log(paragraph[1].className);
+    //   console.log(paragraph[2].className);
+
+    //   console.log(div[0].className);
+    //   console.log(div[1].className);
+    //   console.log(div[2].className);
+
+    //   console.log(input[0].className);
+    //   console.log(input[1].className);
+    //   console.log(input[2].className);
+    // }
+
+    // Вариант 2 (В этом варианте синтаксис вызова функции отличается от заданной, 
+    // но он короче (универсальная функция для всех массивов элементов) 
+    // и с другими методами: querySelectorAll, forEach)
+    window.onload = () => {
+      const paragraph = document.querySelectorAll('p');
+      const div = document.querySelectorAll('div');
+      const input = document.querySelectorAll('input');
+
+      setRedButton = (arrOldNameClass, newNameClass) => {
+        arrOldNameClass.forEach((item, i) => {
+          arrOldNameClass[i].className = newNameClass;
+        });
+      }
+
+      setRedButton(paragraph, 'redParagraph');
+      setRedButton(div, 'blueDiv');
+      setRedButton(input, 'greenButton');
+
+      console.log(paragraph[0].className);
+      console.log(paragraph[1].className);
+      console.log(paragraph[2].className);
+
+      console.log(div[0].className);
+      console.log(div[1].className);
+      console.log(div[2].className);
+
+      console.log(input[0].className);
+      console.log(input[1].className);
+      console.log(input[2].className);
+    }
+  </script>
+</head>
+
+<body>
+  <p class="class1">Paragraph 1</p>
+  <p class="class2">Paragraph 2</p>
+  <p>Paragraph 3</p>
+
+  <div class="class1">DIV 1</div>
+  <div>DIV 2</div>
+  <div class="class3">DIV 3</div>
+
+  <input type="button" value="button1">
+  <input class="class2" type="button" value="button2">
+  <input type="button" value="button3">
+</body>
+
+</html>

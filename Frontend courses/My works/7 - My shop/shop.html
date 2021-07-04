@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My shop - Shop</title>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> -->
+  <style>
+    @font-face {
+      font-family: oswald;
+      src: url('./font/Oswald-VariableFont_wght.ttf');
+    }
+  </style>
+  <link rel="stylesheet" href="./css/shop.css">
+  <script src="./js/shop.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="heardTitle">MY SHOP</div>
+    <nav>
+      <button class='button btnMain' name="button" type="button" value="button">Main</button>
+      <button class='button btnContact' name="button" type="button" value="button">Contact</button>
+      <button id="target" class='button btnCart' name="button" type="button" value="button">Cart<span
+          id='boxCounter'></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <div id="shop">
+      <div class="product" data-price="919" draggable="true">
+        <img class="image" src="./images/iphone.png" alt="">
+        <div class='desc'>
+          <h3>iPhone 11</h3>
+          <p>4/128GB</p>
+          <p>OS: iOS</p>
+          <p>Color: Black</p>
+          <p>Screen: 6.1"</p>
+          <p>Camera: 12 Mp</p>
+          <p>Priсe: 919$</p>
+          <button id='btnApple' class='btnToCart' name="button" type="button" value="button">Put in cart</button>
+        </div>
+      </div>
+
+      <div class="product" data-price="999" draggable="true">
+        <img class="image" src="./images/samsung.png" alt="">
+        <div class='desc'>
+          <h3>Samsung S20</h3>
+          <p>8/128GB</p>
+          <p>OS: Android 10</p>
+          <p>Color: Aura Red</p>
+          <p>Screen: 6.2"</p>
+          <p>Camera: 10 Мp</p>
+          <p>Priсe: 999$</p>
+          <button class='btnToCart' name="button" type="button" value="button">Put in cart</button>
+        </div>
+      </div>
+
+      <div class="product" data-price="659" draggable="true">
+        <img class="image" src="./images/oppo.png" alt="">
+        <div class='desc'>
+          <h3>OPPO Reno3 Pro</h3>
+          <p>12/256GB</p>
+          <p>OS: Android 10</p>
+          <p>Color: Midnight Black</p>
+          <p>Screen: 6.5"</p>
+          <p>Camera: 32 Мp</p>
+          <p>Priсe: 659$</p>
+          <button class='btnToCart' name="button" type="button" value="button">Put in cart</button>
+        </div>
+      </div>
+
+      <div class="product" data-price="739" draggable="true">
+        <img class="image" src="./images/huawei.png" alt="">
+        <div class='desc'>
+          <h3>Huawei P40</h3>
+          <p>8/128GB</p>
+          <p>OS: Android 10</p>
+          <p>Color: Black</p>
+          <p>Screen: 6,58"</p>
+          <p>Camera: 50 Мp</p>
+          <p>Priсe: 739$</p>
+          <button class='btnToCart' name="button" type="button" value="button">Put in cart</button>
+        </div>
+      </div>
+
+      <div class="product" data-price="849" draggable="true">
+        <img class="image" src="./images/xiaomi.png" alt="">
+        <div class='desc'>
+          <h3>Xiaomi Mi 10</h3>
+          <p>8/256GB</p>
+          <p>OS: Android 10</p>
+          <p>Color: Gray</p>
+          <p>Screen: 6.67"</p>
+          <p>Camera: 20 Мp</p>
+          <p>Priсe: 849$</p>
+          <button class='btnToCart' name="button" type="button" value="button">Put in cart</button>
+        </div>
+      </div>
+
+      <div class="product" data-price="1149" draggable="true">
+        <img class="image" src="./images/oneplus.png" alt="">
+        <div class='desc'>
+          <h3>OnePlus 8 Pro</h3>
+          <p>12/256GB</p>
+          <p>OS: Android 10</p>
+          <p>Color: Ultramarine Blue</p>
+          <p>Screen: 6,78"</p>
+          <p>Camera: 16,0 Мp</p>
+          <p>Priсe: 1149$</p>
+          <button class='btnToCart' name="button" type="button" value="button">Put in cart</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>MyShop</div>
+    <div class="icons">
+      <div><a href="http://www.facebook.com"><img src='./images/facebook-white.png' /></a></div>
+      <div><a href="http://www.instagram.com"><img src='./images/instagram-white.png' /></a></div>
+      <div><a href="http://www.telegram.com"><img src='./images/telegram-white.png' /></a></div>
+      <div><a href="http://www.twitter.com"><img src='./images/twitter-white.png' /></a></div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

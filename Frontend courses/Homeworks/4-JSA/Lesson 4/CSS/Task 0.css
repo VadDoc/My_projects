@@ -1,0 +1,18 @@
+div {
+  width: 100px;
+  height: 100px;
+  float: left;
+  border: 2px solid white;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.clear-both {
+  clear: both;
+}

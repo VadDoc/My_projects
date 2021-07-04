@@ -1,0 +1,27 @@
+body {
+  background-color: rgb(196, 246, 163);
+}
+
+.container {
+  margin-top: 10px;
+  background-color: rgb(246, 193, 193);
+  min-height: 200px;
+}
+
+.row {
+  min-height: 200px;
+}
+
+.col {
+  min-height: 50px;
+}
+
+.row>div:nth-of-type(odd) {
+  background-color: blue;
+  color: white;
+}
+
+.row>div:nth-of-type(even) {
+  background-color: yellow;
+  color: navy;
+}

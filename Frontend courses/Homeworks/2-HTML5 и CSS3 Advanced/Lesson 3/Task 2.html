@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Задание
+Нарисовать линию с эффектами тени -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/Task 2.css">
+  <script>
+    window.addEventListener("load", init, false);
+
+    function init() {
+      let canvas = document.getElementById("canvas");
+      let context = canvas.getContext("2d");
+
+      context.beginPath();
+      context.lineWidth = 5;
+      context.strokeStyle = 'rgba(255, 0, 0, 0.5)';
+
+      context.moveTo(100, 300);
+      context.lineTo(600, 300);
+
+      context.shadowColor = "rgba(0, 0, 0, 1)";
+      context.shadowOffsetX = 0;
+      context.shadowOffsetY = 8;
+
+      context.shadowBlur = 15;
+
+      context.stroke();
+    }
+  </script>
+</head>
+
+<body>
+
+  <canvas id="canvas" height="800" width="1000">
+  </canvas>
+</body>
+
+</html>

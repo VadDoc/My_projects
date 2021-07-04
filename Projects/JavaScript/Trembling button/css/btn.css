@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 70px;
+    background-color: red;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    animation: shake-btn 1.5s ease;
+    animation-iteration-count: 1;
+}
+
+.btn:hover .text {
+    animation: shake-btn 1.5s ease;
+    animation-iteration-count: 1;
+    animation-delay:.1s;
+
+}
+
+@keyframes shake-btn {
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    40% {
+        transform: rotate(6deg);
+    }
+
+    55% {
+        transform: rotate(-4deg);
+    }
+
+    70% {
+        transform: rotate(2deg);
+    }
+
+    80% {
+        transform: rotate(-1deg);
+    }
+
+    92% {
+        transform: rotate(.5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

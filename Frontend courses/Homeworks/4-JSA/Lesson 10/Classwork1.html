@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script>
+        window.addEventListener('load', init, false);
+
+        function init() {
+            let xhr = new XMLHttpRequest();
+            let obj;
+
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    obj = JSON.parse(xhr.responseText);
+
+                    showInfo(obj[2], "outputUser2");
+                    showInfo(obj[3], "outputUser3");
+                }
+            }
+            xhr.send();
+        }
+
+        function showInfo(objUser, idOutputUser) {
+            document.getElementById(idOutputUser).innerHTML = "Имя - " + objUser.name + ", Телефон - " + objUser.phone;
+        }
+    </script>
+</head>
+
+<body>
+    <p id="outputUser2"></p>
+    <p id="outputUser3"></p>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+$color-gray: gray;
+$color-white: white;
+$size-100: 100px;
+$size-10: 10px;
+$font-size: 10px;
+
+@import 'header';
+@import 'footer';
+@import 'mixin';
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: $size-100*2 1fr $size-100*2;
+  grid-template-rows: min-$size-100*4;
+  padding-left: 10vw;
+  padding-right: 10vw;
+
+  nav {
+    grid: 1/1;
+    background-color: lighten($color-gray, 10%);
+    padding: $size-10*2;
+    text-align: center;
+
+    a {
+      display: block;
+      text-decoration: none;
+      background-color: darken($color-gray, 5%);
+      color: $color-white;
+      font-size: $font-size*3;
+      font-weight: bold;
+      margin-bottom: $size-10;
+      padding: $size-10;
+      @include border(10px);
+      transition: all 0.4s;
+
+      &:hover {
+        transform: scale(1.05);
+        background-color: darken($color-gray, 10%);
+      }
+    }
+
+
+  }
+
+  article {
+    grid: 1/2;
+    padding: $size-10 $size-10*2;
+
+    h3 {
+      font-size: $font-size*2.5;
+    }
+  }
+
+  aside {
+    grid: 1/3;
+    background-color: lighten($color-gray, 30%);
+    padding: $size-10 $size-10*1.5;
+
+    h4 {
+      font-size: $font-size*2;
+    }
+  }
+}
+

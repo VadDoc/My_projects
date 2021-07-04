@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+window.addEventListener('load', getCoord, false);
+
+function getCoord() {
+    let box = document.querySelector('.all-services-page-chrono');
+
+    let divY = box.getBoundingClientRect().top;
+    let scrollY = box.scrollTop;
+    let diff = 500;
+    
+    if (divY < scrollY  + diff) {
+        startCounter('#all-services-chrono-1', 600);
+        startCounter('#all-services-chrono-2', 1200);
+        startCounter('#all-services-chrono-3', 26000);
+        startCounter('#all-services-chrono-4', 170);
+    }
+
+    let getScroll = function() {
+      if (divY < pageYOffset + diff) {
+        startCounter('#all-services-chrono-1', 600);
+        startCounter('#all-services-chrono-2', 1200);
+        startCounter('#all-services-chrono-3', 26000);
+        startCounter('#all-services-chrono-4', 170);
+          window.removeEventListener('scroll', getScroll);
+      }
+    }
+
+    window.addEventListener('scroll', getScroll);
+}
+
+function startCounter(div, num) {
+    let counterBox = document.querySelector(div);
+    let counter = 0;
+    let time = 3000;
+
+    let interval = 10;
+
+    let addNum = interval  * num / time ;
+
+    let intervalHandler;
+    
+    function count() {
+        if (counter < num) {
+            counter += addNum;
+            counterBox.innerHTML = Math.floor(counter);
+        }
+    }   
+
+    intervalHandler = setInterval(count, interval); 
+}
+
+
+    </script>
+</head>
+<body>
+
+    <div class="all-services-page-chrono">
+        <div class="dark">
+            <div class="chrono pad-lr flex">
+                <div class="chrono-box">
+                    <div class="chrono-box-num"><span id="all-services-chrono-1">0</span>+</div>
+                </div>
+                <div class="chrono-box">
+                    <div class="chrono-box-num"><span id="all-services-chrono-2">0</span>+</div>
+                </div>
+                <div class="chrono-box">
+                    <div class="chrono-box-num"><span id="all-services-chrono-3">0</span>+</div>
+                </div>
+                <div class="chrono-box">
+                    <div class="chrono-box-num"><span id="all-services-chrono-4">0</span>+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

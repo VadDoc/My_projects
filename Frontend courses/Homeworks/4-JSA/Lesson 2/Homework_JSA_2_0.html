@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // Дополнительное задание
+
+    window.onload = () => {
+      buttonClickDiv = () => {
+        const div = document.getElementById('test_div');
+        div.style.border = '4px solid red';
+      }
+
+      buttonClickParagraph = () => {
+        const paragraphs = document.getElementsByTagName("p");
+        for (let i = 0; i < paragraphs.length; i++) {
+          paragraphs[i].style.border = '4px solid blue';
+        }
+      }
+
+      buttonClickHyperLink = () => {
+        const hyperlinks = document.getElementsByTagName("a");
+        for (let i = 0; i < hyperlinks.length; i++) {
+          hyperlinks[i].style.border = '4px solid green';
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Дополнительное задание -->
+  <p>Параграф 1</p>
+  <p>Параграф 2</p>
+  <a href="#">hyperlink 1</a>
+  <div id="test_div">DIV id="test_div"</div>
+  <a href="#">hyperlink 2</a>
+  <p>Параграф 3</p>
+  <div>
+    <input type="button" value="Выбрать все параграфы" onclick="buttonClickParagraph()">
+    <input type="button" value="Выбрать все ссылки" onclick="buttonClickHyperLink()">
+    <input type="button" value="Выбрать DIV" onclick="buttonClickDiv()">
+  </div>
+</body>
+
+</html>

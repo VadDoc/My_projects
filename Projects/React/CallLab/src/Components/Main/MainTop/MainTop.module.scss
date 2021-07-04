@@ -1,0 +1,21 @@
+.mainTop{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-right: 100px;
+    background-color: #f5f8ff;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    .box {
+        padding-left: 80px;
+        padding-right: 200px;
+        color: red;
+        align-items: center;
+        justify-content: flex-start;
+        height: 90px;
+        font-weight: normal;
+    }
+}
+

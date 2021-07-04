@@ -1,0 +1,25 @@
+.control {
+    justify-content: space-between;
+    padding-top: 11px;
+    padding-bottom: 10px;
+
+    input,
+    select,
+    textarea {
+        padding: 5px 20px;
+        border: 1px solid rgb(204, 203, 203);
+        border-radius: 10px;
+        font-size: 1.2rem;
+        color: gray;
+    }
+
+    textarea,
+    input {
+        width: 100%;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+}

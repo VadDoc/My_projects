@@ -1,0 +1,68 @@
+html{
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.body{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;    
+}
+
+.content{
+    height: 600px;
+    width: 70%;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+nav{
+    width: 100%;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(8, 8, 8, 0.712);
+    z-index: 10;
+}
+
+body{
+    margin: 0;
+}
+
+.backgroundImg{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.2; 
+    z-index: 0;
+}
+ul{
+    margin: 0;
+}
+li{
+    height: 60px;
+    list-style-type: none;
+    float: left;
+    padding: 0 20px;
+}
+
+li a{
+    font-size: 40px;
+    color: white;
+    display: block;
+    width: 90%;
+    line-height: 60px;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+li a:hover{
+    color: rgb(100, 150, 160);
+}

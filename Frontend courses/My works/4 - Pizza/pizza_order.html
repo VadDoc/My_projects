@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Nanum+Pen+Script" rel="stylesheet">
+    <link rel="stylesheet" href="share.css">
+    <link rel="stylesheet" href="pizza_order.css">
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pizza_menu.html">Menu</a></li>
+          <li><a href="pizza_order.html">Order</a></li>
+          <li><a href="pizza_about.html">About As</a></li>
+        </ul>
+    </nav>
+    <img class="backgroundImg" src="img/pizza21.jpg" alt="pizza">    
+    <div class="body">
+        <div class="content">
+            <fieldset>
+                <form action="#" method="GET">
+                    <div class="column">
+                        <label class="bigLabel" for="pizza">Choose pizza</label>
+                        <select name="pizza">
+                            <option value="Choose">Choose...</option>
+                            <option value="texas">Texas</option>
+                            <option value="barbecue">Brbecue</option>
+                            <option value="carbonara">Carbonara</option>
+                            <option value="bavarian">Bavarian</option>
+                            <option value="provence">Provence</option>
+                        </select>
+                        <label class="bigLabel">Add topping</label>
+                        <p>
+                            <input type="checkbox" name="mozzarella">
+                            <label>Mozzarella</label>
+                        </p>                    
+                        <p>
+                            <input type="checkbox" name="mushrooms">
+                            <label>Mushrooms</label>
+                        </p>                    
+                        <p>
+                            <input type="checkbox" name="ham">
+                            <label>Ham</label>
+                        </p>                    
+                        <p>
+                            <input type="checkbox" name="pepperoni">
+                            <label>Pepperoni</label>
+                        </p>                    
+                        <p>
+                            <input type="checkbox" name="sausage">
+                            <label>Sausage</label>
+                        </p>                    
+                        <p>
+                            <input type="checkbox" name="bacon">
+                            <label>Bacon</label>
+                        </p>                    
+                        <p>
+                            <input type="checkbox" name="blackOlives">
+                            <label>Black olives</label>
+                        </p>                    
+                        <p>
+                            <input type="checkbox" name="greenPeppers">
+                            <label>Green peppers</label>
+                        </p>                    
+                    </div>
+                    <div class="column">
+                        <label class="bigLabel">Choose the size</label>
+                        <p>
+                            <input type="radio" name="pizzaSize" value="small" />
+                            <label>Small</label>
+                            <input type="radio" name="pizzaSize" value="medium" />
+                            <label>Medium</label>
+                            <input type="radio" name="pizzaSize" value="big" />
+                            <label>Big</label>
+                        </p>
+                        <label class="bigLabel" for="quantity">Quantity</label>
+                        <select name="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                        <p>
+                            <label class="smallLabel">Name</label>
+                            <input type="text" name="name" required>
+                        </p>                    
+                        <p>
+                            <label class="smallLabel">Phone</label>
+                            <input type="text" name="phone" required>
+                        </p>                    
+                        <p>
+                            <label class="smallLabel">Address</label>
+                            <input type="text" name="address" required>
+                        </p> 
+                        <button type="submit">Submit</button>                   
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>

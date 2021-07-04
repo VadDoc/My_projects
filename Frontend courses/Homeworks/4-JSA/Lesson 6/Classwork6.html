@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: absolute;
+    }
+  </style>
+  <script>
+    window.addEventListener("load", handlerKey, false);
+
+    let coordLeft = 0;
+    let coordTop = 0;
+
+    function handlerKey() {
+      window.addEventListener('keydown', moveDiv, false)
+    }
+
+    function moveDiv(e) { // Без if ... else работает движение по диагонали при нажатых 2 клавишах
+      let div = document.getElementById('div');
+      if (e.keyCode == 39) {
+        coordLeft += 10;
+        div.style.left = coordLeft + 'px';
+      }
+      if (e.keyCode == 37) {
+        coordLeft -= 10;
+        div.style.left = coordLeft + 'px';
+      }
+      if (e.keyCode == 38) {
+        coordTop -= 10;
+        div.style.top = coordTop + 'px';
+      }
+      if (e.keyCode == 40) {
+        coordTop += 10;
+        div.style.top = coordTop + 'px';
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div id='div'></div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // Задание 2
+    window.onload = () => {
+      createNewParagraph = () => {
+        const div1 = document.getElementById('div1');
+        const paragraph = document.createElement('p');
+        paragraph.innerHTML = `Paragraph`;
+        div1.append(paragraph);
+
+        const paragraphs = document.getElementsByTagName('p');
+        for (let i = 0; i < paragraphs.length; i++) {
+          if (paragraphs.length < 10) {
+            paragraph.innerHTML = `Paragraph ${i + 1}`;
+            div1.append(paragraph);
+          } else {
+            div1.innerHTML = '';
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <input type="button" value="Создать параграф" onclick="createNewParagraph()">
+  <div id="div1"></div>
+</body>
+
+</html>

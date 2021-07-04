@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    'header''image-1''image-2''image-3''image-4''image-5'
+    'image-6''image-7''image-8''image-9''image-10''footer';
+}
+
+header {
+  grid-area: header;
+  padding-top: 5px;
+  border-bottom: 3px solid white;
+  font-family: oswald;
+  font-size: 64px;
+  font-weight: bold;
+  background-image: linear-gradient(to top, rgb(51, 51, 51), black);
+  opacity: 0.9;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer {
+  grid-area: footer;
+  background-color: black;
+  border-top: 3px solid white;
+  background: transparent;
+  padding-top: 15px;
+  background-image: linear-gradient(to bottom, rgb(51, 51, 51), black);
+  opacity: 0.9;
+  font-family: oswald;
+  font-size: 45px;
+}
+
+.heardTitle {
+  height: 94px;
+}
+
+.button {
+  width: 285px;
+  height: 55px;
+  margin: 10px 20px 20px 20px;
+  color: rgb(241, 241, 241);
+  background-color: rgb(31, 31, 31);
+  border: 3px solid rgb(48, 137, 229);
+  border-radius: 7px;
+  box-shadow: 3px 3px 10px 0px rgb(48, 137, 229);
+  font-size: 20px;
+  letter-spacing: 1.5;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.button:hover {
+  background-color: rgb(63, 62, 62);
+  color: rgb(255, 255, 255);
+  box-shadow: 3px 3px 20px 10px rgb(48, 137, 229);
+}
+
+.btnCart {
+  position: relative;
+}
+
+#boxCounter {
+  position: absolute;
+  right: 30px;
+  color: rgb(250, 81, 81);
+  font-weight: bold;
+}
+
+.image {
+  height: 280px;
+  background-size: cover;
+  border: 3px solid rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255);
+  opacity: 0.6;
+  font-size: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.image:hover {
+  opacity: 1;
+  font-size: 50px;
+}
+
+.image-1 {
+  grid-area: image-1;
+  background-image: url(../images/phone.jpg);
+}
+
+.image-2 {
+  grid-area: image-2;
+  background-image: url(../images/camera.jpg);
+}
+
+.image-3 {
+  grid-area: image-3;
+  background-image: url(../images/drone.jpg);
+}
+
+.image-4 {
+  grid-area: image-4;
+  background-image: url(../images/tv.jpg);
+}
+
+.image-5 {
+  grid-area: image-5;
+  background-image: url(../images/laptops.jpg);
+}
+
+.image-6 {
+  grid-area: image-6;
+  background-image: url(../images/printer.jpg);
+}
+
+.image-7 {
+  grid-area: image-7;
+  background-image: url(../images/watch.jpg);
+}
+
+.image-8 {
+  grid-area: image-8;
+  background-image: url(../images/robot.jpg);
+}
+
+.image-9 {
+  grid-area: image-9;
+  background-image: url(../images/headphone.jpg);
+}
+
+.image-10 {
+  grid-area: image-10;
+  background-image: url(../images/hoverboard.jpg);
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+.icons div img {
+  width: 40px;
+  height: 40px;
+  margin: 20px 30px 20px 30px;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr, 1fr;
+    grid-template-areas:
+      'header header'
+      'image-1 image-2'
+      'image-3 image-4'
+      'image-5 image-6'
+      'image-7 image-8'
+      'image-9 image-10'
+      'footer footer';
+  }
+
+  .image-5,
+  .image-9 {
+    height: auto;
+  }
+}
+
+@media (min-width: 840px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'header header header'
+      'image-1 image-1 image-2'
+      'image-3 image-4 image-4'
+      'image-5 image-5 image-6'
+      'image-5 image-5 image-7'
+      'image-8 image-9 image-9'
+      'image-10 image-9 image-9'
+      'footer footer footer';
+  }
+}

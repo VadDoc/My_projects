@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script>
+        window.addEventListener('load', init, false);
+
+        function init() {
+            fetch("https://jsonplaceholder.typicode.com/users")
+                .then(function (obj) {
+                    return obj.json()
+                })
+                .then(function (obj) {
+                    showInfo(obj[2], "outputUser2");
+                    showInfo(obj[3], "outputUser3");
+                })
+        }
+
+        function showInfo(objUser, idOutputUser) {
+            document.getElementById(idOutputUser).innerHTML = "Имя - " + objUser.name + ", Телефон - " + objUser.phone;
+        }
+    </script>
+</head>
+
+<body>
+    <p id="outputUser2"></p>
+    <p id="outputUser3"></p>
+</body>
+
+</html>

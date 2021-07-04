@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinearGradient</title>
+    <script>
+        window.addEventListener("load", init, false);
+        function init() {
+            let canvas = document.getElementById('canvas');           
+            let context = canvas.getContext('2d');
+
+            let hue = [[255, 0, 0], [255, 255, 0], [0, 255, 0], [0, 255, 255], [0, 0, 255], [255, 0, 255]],
+                gradient = context.createLinearGradient(75, 180, 290, 0);
+            for (var i = 0; i <= 5; i++) {
+                color = 'rgb(' + hue[i][0] + ', ' + hue[i][1] + ', ' + hue[i][2] + ')';
+                gradient.addColorStop(i * 1 / 6, color);
+            }
+            context.fillStyle = gradient;
+            context.fillRect(0, 0, 300, 300);
+
+        }
+    </script>
+    <style>
+        canvas {
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" height="300" width="300">
+        Ваш браузер не поддерживает элемент <i>Canvas</i>
+    </canvas>
+</body>
+</html>
+

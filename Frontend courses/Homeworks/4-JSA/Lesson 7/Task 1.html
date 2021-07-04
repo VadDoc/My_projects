@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./CSS/Task 1.css">
+  <script src="./JS/Task 1.js"></script>
+</head>
+
+<body>
+</body>
+<form action="" method="get" name="formOrder">
+  <fieldset>
+    <legend>Контактная информация</legend>
+    <p><label for="name">Имя: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" name="customerName"
+        placeholder="Обязательно к заполнению"></p>
+    <p><label for="address">Адрес: &nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" name="address"
+        placeholder="Обязательно к заполнению"></p>
+    <p><label for="telephone">Телефон: </label><input type="text" name="telephone" placeholder="(ХХХ) ХХХ-ХХ-ХХ"></p>
+  </fieldset>
+  <fieldset>
+    <legend>Выберите свою пиццу</legend>
+    <p>
+      <select name="kindOfPizza">
+        <option value="">Выберите ингредиенты пиццы:</option>
+        <option value="cheese"> - сыр</option>
+        <option value="tomato"> - помидоры</option>
+        <option value="mashroom"> - грибы</option>
+        <option value="becon"> - бекон</option>
+        <option value="oliva"> - оливки</option>
+        </optgroup>
+      </select><br>
+    </p>
+    <p>
+      <select name="sizeOfPizza">
+        <option value="">Выберите размер пиццы:</option>
+        <option value="small"> - маленькая</option>
+        <option value="middle"> - средняя</option>
+        <option value="large"> - большая</option>
+        </optgroup>
+      </select><br>
+    </p>
+    <textarea name="comments" id="" cols="33" rows="5" placeholder="Примечание"></textarea><br>
+  </fieldset>
+  <fieldset>
+    <p id='result'></p>
+    <input type="submit" value="Заказать" name="submit">
+  </fieldset>
+</form>
+
+</html>

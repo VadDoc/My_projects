@@ -1,0 +1,149 @@
+.main-container {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-container,
+.header-products-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.choose-product-container {
+    /* height: 20px; */
+    padding: 10px 15px;
+    background-color: rgb(211, 207, 207);
+    display: inline-block;
+    font-weight: bold;
+}
+
+.choose-product-container:hover,
+.active {
+    background-color: rgb(114, 114, 114);
+    color: white;
+    cursor: pointer;
+}
+
+.par-name-container {
+    display: flex;
+    justify-content: space-between;
+    width: 170px;
+}
+
+.product-container,
+.choose-products-container {
+    display: none;
+}
+
+.product-title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.checbox-title {
+    margin-left: 10px;
+}
+
+.input {
+    display: block;
+    margin: 5px 0;
+    width: 170px;
+}
+
+.param {
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
+    /* display: none; */
+    /* padding-top: 5px; */
+    padding-bottom: 5px;
+}
+
+.tables-container {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+
+.table-title {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.table {
+    border-collapse: collapse;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.table td {
+    border: 1px solid rgb(216, 215, 215);
+    /* padding-right: 5px;
+    padding-left: 5px; */
+    height: 20px;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+
+}
+
+.table tr:first-child {
+    background-color: rgb(233, 228, 228);
+    /* font-size: 1.1em; */
+    font-weight: bold;
+}
+
+.table tr td:first-child {
+    font-weight: bold;
+    padding: 5px 20px;
+}
+
+.table input {
+    border: 0;
+    /* font-size: 1em; */
+    text-align: center;
+    width: 100px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 1px;
+    font-size: 1em;
+}
+
+.btn {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    width: 150px;
+    min-height: 50px;
+    font-size: 1em;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    align-self: center;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(114, 114, 114);
+    color: white;
+}
+
+.btn:active {
+    background-color: rgb(177, 176, 176);
+}
+
+.product-image-container input {
+    margin: 5px 0;
+}
+

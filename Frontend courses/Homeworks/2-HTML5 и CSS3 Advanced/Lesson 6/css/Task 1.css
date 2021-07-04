@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/*Добавление собственной переменной*/
+header {
+  width: 100%;
+  background-color: #343434;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  background-color: #4d4d4d;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 40px;
+  color: white;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 1fr 200px;
+      grid-template-columns: 200px 1fr 200px;
+  -ms-grid-rows: min- 400px;
+      grid-template-rows: min- 400px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+main nav {
+  grid: 1/1;
+  background-color: #9a9a9a;
+  padding: 20px;
+  text-align: center;
+}
+
+main nav a {
+  display: block;
+  text-decoration: none;
+  background-color: #737373;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+main nav a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #676767;
+}
+
+main article {
+  grid: 1/2;
+  padding: 10px 20px;
+}
+
+main article h3 {
+  font-size: 25px;
+}
+
+main aside {
+  grid: 1/3;
+  background-color: #cdcdcd;
+  padding: 10px 15px;
+}
+
+main aside h4 {
+  font-size: 20px;
+}
+/*# sourceMappingURL=Task 1.css.map */

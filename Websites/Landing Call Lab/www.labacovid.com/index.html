@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/call-lab.css">
+    <script src="./js/menu.js"></script>
+    <script src="./js/accordion.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/callback.js"></script>
+</head>
+<body>
+   
+    <header>
+        <div class="language flex">
+            <a href="#"><img src="./img/en.gif" alt=""></a>
+            <a href="#"><img src="./img/ua.gif" alt=""></a>
+            <a href="#"><img src="./img/ru.gif" alt=""></a>
+        </div>
+        <div class="container-menu">
+                <div class="container-menu-1 flex container">
+                    <div class="container-menu-1-1">
+                        <img src="./img/logo.png" alt="">
+                    </div>
+                    <div class="container-menu-1-2">Вызов мобильной лаборатории</div>
+                    <div class="container-menu-1-3 flex">
+                        <div class="container-menu-1-3-1">
+                            <img src="./img/menu.png" alt="">
+                        </div>
+                        <div class="container-menu-1-3-2">Меню</div>
+                    </div>
+                    <div class="container-menu-1-4">
+                        <p class="mb-0"><span><a href="tel:+380961121515">+38 (096) 112 15 15</a></span></p>
+                        <p class="mb-0">Принимаем звонки 24/7</p>
+                    </div>
+                    <div class="container-menu-1-5">
+                        <a href="#call"><button class="btn-header-1">Заказать&nbsp;звонок</button></a>
+                    </div>
+                </div>
+            <div class="container-menu-2 flex container">
+                <div class="container-menu-2-1">
+                    <img src="./img/logo.png" alt="">
+                </div>
+                <div class="container-menu-2-2">
+                    <a href="#about">О компании</a>
+                </div>
+                <div class="container-menu-2-3">
+                    <a href="#why">Почему мы</a>
+                </div>
+                <div class="container-menu-2-4">
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="container-menu-2-6">
+                    <a href="#contact">Контакты</a>
+                </div>
+                <div class="container-menu-2-7">
+                    <img src="./img/modal-close-tw.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div class="header-1 container">
+            <div class="header-1-1">
+
+                <h1>ТЕСТИРОВАНИЕ НА COVID-19<br>ДЛЯ ОРГАНИЗАЦИЙ И ПРЕДПРИЯТИЙ 
+                    </h1>
+                
+            </div>
+            <div class="header-1-2 flex">
+                <div class="header-1-2-1">
+                    <p>Сэкономим Ваше время и время Ваших сотрудников</p>
+                </div>
+                <div class="header-1-2-2">
+                    <p>Приедем в любую точку страны в удобное для вас время</p>
+                </div>
+                <div class="header-1-2-3">
+                    <p>Предоставим корпоративную скидку</p>
+                </div>
+            </div>
+            <div class="header-1-3 flex">
+                <!-- <button class="btn-header-2">Заказать&nbsp;звонок</button> -->
+               <a href="#app"><button class="btn-header-3">Получить консультацию</button></a> 
+               <a name="app"></a>
+
+            </div>
+        </div>
+
+        <div class="header-2">
+            <div class="header-2-title">Укажите Вашу контактную информацию<br>и желаемую дату забора</div>
+            <form action="" method="post" id="mailForm" name="mailForm">
+                <div class="header-2-1-form">
+                    <div class="header-2-1-form-line flex">
+                    <input type="text" id="name" name="name" placeholder="Укажите имя" class="form-control">
+
+                    </div>
+                    <div class="header-2-1-form-line flex">
+                        <input type="text" id="email" name="email" placeholder="Укажите e-mail" class="form-control">           
+
+                    </div>
+                    <div class="header-2-1-form-line flex">
+                        <input type="tel" name="phone" class="" id="form-contacts_phone" placeholder="Номер телефона: +38 (000) 000-00-00">
+                    </div>
+                    <div class="header-2-1-form-line flex">
+                        <input type="number" placeholder="Количество человек" min="2">
+                    </div>
+                    <div class="header-2-1-form-line flex">
+                        <textarea name="comment" id="comment" cols="30" rows="4" placeholder="Оставить комментарий к заявке..."></textarea>
+                    </div>
+                    
+                    <button type="button" id="send-app" name="button" class="send-app">Оформить заявку</button>
+                </div>
+            </form>
+
+
+
+
+        </div>
+    </header>
+    <main>
+        <div class="main-1">
+                <div class="main-1-box flex">
+                <div class="main-1-1"><span id="error-mess"></span></div>
+                <div class="main-1-2">
+                </div>
+                </div>
+        </div>
+        <a name="about"></a>
+        <div class="main-2">
+            <div class="main-2-1"><H2>О НАШЕЙ КОМПАНИИ</H2></div>
+            <div class="main-2-2 flex container">
+                <div class="main-2-2-1">
+                    <b>Компания «КОЛЛАБ» предоставляет уникальный в Украине сервис</b> — выезд мобильной лаборатории 24/7 домой к Вашим сотрудникам или в офис всего в один клик.<br>
+Мы предоставляем услугу по забору материала для проведения ПЦР тестирования на COVID-19 c возможностью выбрать лабораторию, которой вы доверяете.<br><br>
+Если нужно незамедлительно узнать  о наличии вируса у Ваших сотрудников - закажите экспресс тест на выявление антигена к COVID-19 (результат через 30 минут).<br>
+Более подробно об этих тестах в разделе «Вопросы и ответы» (FAQ).
+
+                </div>
+                <div class="main-2-2-2">
+                    <img src="./img/callab-24.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="main-2-3 flex container">
+                <div class="main-2-3-1 flex">
+                    <img src="./img/about-1.png" alt="">
+                </div>
+                <div class="main-2-3-2">
+                    <b>Выезд мобильной лаборатории для тестирования корпоративных клиентов возможен по всей территории Украины.</b> <br><br>
+                    В штат нашей мобильной лаборатории входят только опытные фельдшера, медсестры и логисты. Весь персонал прошел полную подготовку по забору и транспортировке биоматериала для тестирования на COVID-19, в соответствие с международными стандартами, а также с регламентом МОЗ Украины. <br><br>
+
+
+                </div>    
+            </div>
+        </div>
+        <a name="why"></a>
+        <div class="main-3 container">
+            <div class="main-3-1"><H2>8 ПРИЧИН ЗАКАЗАТЬ <br>УСЛУГУ У НАС</H2></div>
+            <div class="main-3-2 flex">
+                <div class="main-3-2-1 flex">
+                    <div>
+                        <div class="main-3-2-1-elem flex">
+                            <div class="main-3-2-1-elem-1"><img src="./img/cause-1.png" alt=""></div>
+                            <div class="main-3-2-1-elem-2">УДОБСТВО</div>
+                            <div class="main-3-2-1-elem-3"><img src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-3-2-1-elem-answer">Оформите онлайн-заявки 24/7 «в 1 клик» и наш менеджер свяжеться с Вами.</div>
+                    </div>
+                    <div>
+                        <div class="main-3-2-1-elem flex">
+                            <div class="main-3-2-1-elem-1"><img src="./img/cause-5.png" alt=""></div>
+                            <div class="main-3-2-1-elem-2">ОПЕРАТИВНОСТЬ</div>
+                            <div class="main-3-2-1-elem-3"><img src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-3-2-1-elem-answer">Время приезда медсестры — в течении 12 часов после оформления заявки на сайте. Быстрое получение результата: 24 часа — в стандартном режиме, 6 часов — в ускоренном режиме.</div>
+                    </div>
+                    <div>
+                        <div class="main-3-2-1-elem flex">
+                            <div class="main-3-2-1-elem-1"><img src="./img/cause-2.png" alt=""></div>
+                            <div class="main-3-2-1-elem-2">ДОСТУПНОСТЬ</div>
+                            <div class="main-3-2-1-elem-3"><img src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-3-2-1-elem-answer"> Мы проводим тестирование на дому или в офисе. Бригады медсестер работают круглосуточно — вы можете выбрать наиболее подходящее время для сдачи анализов и вызвать фельдшера для забора материалов на дом к сотрудникам или в офис.</div>
+                    </div>
+
+                    <div>
+                        <div class="main-3-2-1-elem flex">
+                            <div class="main-3-2-1-elem-1"><img src="./img/cause-6.png" alt=""></div>
+                        <div class="main-3-2-1-elem-2">БЕЗОПАСНОСТЬ</div>
+                            <div class="main-3-2-1-elem-3"><img src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-3-2-1-elem-answer">Все используемые инструменты стерильны, весь персонал выезжает на вызов в специальном защитном костюме. Также вы можете сдать анализ в специально оборудованном автомобиле, на котором приезжает мобильная бригада.</div>
+                    </div>
+
+                    <div>
+                        <div class="main-3-2-1-elem flex">
+                            <div class="main-3-2-1-elem-1"><img src="./img/cause-3.png" alt=""></div>
+                            <div class="main-3-2-1-elem-2">ТОЧНОСТЬ</div>
+                            <div class="main-3-2-1-elem-3"><img src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-3-2-1-elem-answer">Четкое соблюдение процедуры забора биоматериала и условий его транспортировки.</div>
+                    </div>
+
+                    <div>
+                        <div class="main-3-2-1-elem flex">
+                            <div class="main-3-2-1-elem-1"><img src="./img/cause-7.png" alt=""></div>
+                            <div class="main-3-2-1-elem-2">НАДЕЖНОСТЬ</div>
+                            <div class="main-3-2-1-elem-3"><img src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-3-2-1-elem-answer">Мы сотрудничаем только с лицензированными медицинскими лабораториями — вы можете выбрать, в какое из этих учреждений отправить ваш биоматериал для анализа.</div>
+                    </div>
+
+                    <div>
+                        <div class="main-3-2-1-elem flex">
+                            <div class="main-3-2-1-elem-1"><img src="./img/cause-9.png" alt=""></div>
+                            <div class="main-3-2-1-elem-2">ВЫГОДА</div>
+                            <div class="main-3-2-1-elem-3"><img src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-3-2-1-elem-answer">Специальные условия для корпоративный клиентов. С нами Вы экономите время, деньги и контролируете ситуацию в своей компании. </div>
+                    </div>
+
+                    <div>
+                        <div class="main-3-2-1-elem flex">
+                            <div class="main-3-2-1-elem-1"><img src="./img/cause-8.png" alt=""></div>
+                            <div class="main-3-2-1-elem-2">ГАРАНТИЯ</div>
+                            <div class="main-3-2-1-elem-3"><img src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-3-2-1-elem-answer">Наша компания имеет все необходимые разрешительные документы, а медицинский персонал — соответствующее медицинское образование, поэтому вы можете рассчитывать на самое высокое качество получаемых услуг.</div>
+                    </div>
+
+                </div>
+                <div class="main-3-2-2"></div>
+            </div>
+            <div class="main-3-3">
+                <a href="#app"><button class="btn-main-1">Вызвать лабораторию</button></a>
+            </div>
+        </div>
+        <div class="main-4">
+            <div class="main-4-1">
+                <H2>ПОКАЗАНИЯ К ТЕСТИРОВАНИЮ<br>НА COVID-19</H2>
+            </div>
+            <div class="main-4-2 flex">
+                <div class="main-4-2-1">
+                    <ul class="main-4-list">
+                        <li class="mb-3">Для исключения вероятности заражения, если вы или кто-то в коллективе вашей компании контактировал с человеком, у которого выявлен коронавирус.</li>
+                        <li class="mb-3">Для прибывающих из за границы мы проводим тестирование, результаты которого лаборатория передает в ЦГЗ и в приложение «Дій вдома».</li>
+                        <li class="mb-3">При симптомах коронавирусной инфекции (повышенная температура тела, сухой кашель, слабость, одышка, потеря обоняния и возможности различать вкусы, мышечная боль, заложенность носа и другие типичные признаки ОРВИ).</li>
+                        
+                    </ul>
+                </div>
+                <div class="main-4-2-2">
+                    <ul class="main-4-list">
+                        <li class="mb-3">Перед выездом в определенный ряд стран требуется тест ПЦР на английском языке и вы можете получить его, указав такую необходимость</li>
+                        <li class="mb-3">При госпитализации в стационар и перед плановыми операциями.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <a name="faq"></a>
+        <div class="main-5">
+            <div class="main-5-1"><H2>ЧАСТО ЗАДАВАЕМЫЕ<br>ВОПРОСЫ</H2></div>
+            <div class="main-5-2 container">
+                <div class="main-5-2-1">
+                    <div class="main-5-2-1-elem">
+                        <div class="main-5-2-1-question">
+                            <div class="main-5-2-1-question-1">Как проводится работа с корпоративными клиентами?</div>
+                            <div class="main-5-2-1-question-2 flex"><img class="main-5-arrow" src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-5-2-1-answer">
+                            Мы предоставляем услуги как на дому, так и в офисе. Для большей дискретности вы можете вызвать мобильную бригаду, которая не будет заходить в офисное помещение, а по приезду пригласит вас в пункт мобильного забора в специально оборудованном автомобиле.                          
+                        </div> 
+                    </div>
+                    <div class="main-5-2-1-elem">
+                        <div class="main-5-2-1-question">
+                            <div class="main-5-2-1-question-1">Сколько времени уйдет на проверку 100 сотрудников нашего офиса?</div>
+                            <div class="main-5-2-1-question-2 flex"><img class="main-5-arrow" src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-5-2-1-answer">
+                            Для оформления заказа для более 50 сотрудников компании наш менеджер организует выезд нескольких бригад одновременно, а также обустроит стерильное место у вас в офисе, в котором будет проходить забор. Для оптимизации процесса все сотрудники будут зарегистрированы на тестирование по предоставленным спискам.                         
+                        </div> 
+                    </div>
+                    <div class="main-5-2-1-elem">
+                        <div class="main-5-2-1-question">
+                            <div class="main-5-2-1-question-1">Можно ли вызвать бригаду в офис анонимно</div>
+                            <div class="main-5-2-1-question-2 flex"><img class="main-5-arrow" src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-5-2-1-answer">
+                            Мы предоставляем услуги как на дому, так и в офисе. Для большей дискретности вы можете вызвать мобильную бригаду, которая не будет заходить в офисное помещение, а по приезду пригласит вас в пункт мобильного забора в специально оборудованном автомобиле.                           
+                        </div> 
+                    </div>
+                    <div class="main-5-2-1-elem">
+                        <div class="main-5-2-1-question">
+                            <div class="main-5-2-1-question-1">Как подготовиться к тесту?</div>
+                            <div class="main-5-2-1-question-2 flex"><img class="main-5-arrow" src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-5-2-1-answer">
+                            Правила подготовки до тестирования: за 30 минут до взятия мазков из ротоглотки (зева) не употреблять пищу, не пить жидкость, не чистить зубы, не полоскать рот/горло, не жевать жевательную резинку и не курить. Важно! За 2 часа до взятия мазков из носа не закапывать капли, не применять спреи и не промывать нос. Перед взятием мазка, при наличии обильных выделений из носа, необходимо очистить носовые ходы — сильным выдохом удалить слизь из носа (высморкаться)..                            
+                        </div> 
+                    </div>
+                    <div class="main-5-2-1-elem">
+                        <div class="main-5-2-1-question">
+                            <div class="main-5-2-1-question-1">Откуда берут мазок</div>
+                            <div class="main-5-2-1-question-2 flex"><img class="main-5-arrow" src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-5-2-1-answer">
+                            Мазок берется из ротоглотки либо из носа.                           
+                        </div> 
+                    </div>
+                    <div class="main-5-2-1-elem">
+                        <div class="main-5-2-1-question">
+                            <div class="main-5-2-1-question-1">Что такое экспресс-тест на определение антигена коронавируса (COVID-19)?</div>
+                            <div class="main-5-2-1-question-2 flex"><img class="main-5-arrow" src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-5-2-1-answer">
+                            <b>Экспресс-тест «Standart Q Covid-19 Ag для определения антигена» для выявления антигена коронавируса.</b><br>
+Экспресс-тест на выявление антигена коронавируса (COVID-19) используется как предварительное скрининговое обследование, и является вспомогательным методом диагностики коронавирусной инфекции у пациентов с клиническими симптомами SARC-CoV-2 уже с первого дня появления симптомов.<br>
+<b>Преимущества экспресс-теста на коронавирус: </b><br>
+<ol>
+<li>Ранняя диагностика с первого дня появления симптомов.</li>
+<li>Готовность результата теста (анализа) в течение 30 минут</li>
+<li>Высокая чувствительность и специфичность метода.</li>
+<li>Нет возрастных ограничений.</li>
+<li>Нет необходимости брать кровь!!!</li>
+</ol>
+Положительный результат будет означать, что, скорее всего, вы можете быть носителем инфекции и инфицировать других людей и требует подтверждения наличия инфекции методом ПЦР.<br>
+Получив отрицательный результат вероятность того, что вы заболели на момент взятия образца существенно снижается, но, к сожалению, не может быть исключена полностью.<br>
+Тест-система STANDARD Q COVID-19 Ag — это быстрый хроматографический иммуноанализ для качественного определения антигена SARC-CoV-2, присутствующего в носоглотке человека.<br>
+Как подготовиться к экспресс-тестированию на COVID-19 (исследование отделяемого носоглотки на SARS-COV-2):<br>
+<ol>
+<li>За 4 часа до сдачи экспресс-теста на COVID-19 нужно воздержаться от еды, питья, курения (в том числе от кальяна), жевательной резинки, промывания носа назальными каплями.</li>
+<li>В течение 6 часов перед сдачей теста на COVID-19 нельзя применять ингаляционный ввод лекарств и препараты для рассасывания.</li>
+</ol>
+                           
+                        </div> 
+                    </div>
+                    <div class="main-5-2-1-elem">
+                        <div class="main-5-2-1-question">
+                            <div class="main-5-2-1-question-1">Чем отличается экспресс-тест на COVID-19 от ПЦР теста на на COVID-19?</div>
+                            <div class="main-5-2-1-question-2 flex"><img class="main-5-arrow" src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-5-2-1-answer">
+                            <b>Экспресс-тест на антиген COVID-19</b> определяет белковую субстанцию коронавируса, так называемый <b>антиген</b>, который вызывает выработку антител к вирусу в организме человека и делать его можно уже с первого дня заболевания. (Есть экспресс-тесты, которые определяют антитела к коронавирусу, но такие тесты необходимо делать с 5- 7 – 14 -й день от начала симптомов, чтобы в организме уже начали вырабатываться защитные антитела.)<br>
+ПЦР- тест определяет РНК вируса, что также позволяет выявить коронавирус с первого дня появления симптомов, а также  при бессимптомном наличии вируса в организме.<br>
+Экспресс- тест на определение антигена коронавируса (COVID-19) выполняется на месте в течение 30 минут. ПЦР метод – определяет РНК вируса и требует использования специальных приборов и дополнительного времени.<br>
+И тот и другой тест можно использовать с первых дней появления симптомов коронавируса, но, чтобы подтвердить заболевание коронавирусом все – таки придется сделать ПЦР согласно стандартам и требованиям МОЗ Украины, так как экспресс-тест является вспомогательным тестом в диагностике COVID-19.<br>
+И при экспресс-тесте, и для ПЦР исследования берется мазок из носа и зева (назофарингеальный мазок), и не требуется забор венозной крови.
+                           
+                        </div> 
+                    </div>
+                    <div class="main-5-2-1-elem">
+                        <div class="main-5-2-1-question">
+                            <div class="main-5-2-1-question-1">Что такое анализ на коронавирус методом ПЦР?</div>
+                            <div class="main-5-2-1-question-2 flex"><img class="main-5-arrow" src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-5-2-1-answer">
+                            «Золотым стандартом» выявления коронавирусной инфекции является анализ методом ПЦР, когда выявляют РНК (нуклеиновую кислоту) вируса с помощью специальных приборов в специально оборудованной для этого метода ПЦР-лаборатории. Этот метод является самым точным в определении коронавируса. Анализ ПЦР чувствителен на самых ранних этапах инфицирования, даже когда еще нет признаков заболевания, и даже при бессимптомном носительстве вируса.<br>
+Для проведения анализа берут мазок с ротоглотки или носоглотки. Перед этим  рекомендуется в течение 3 часов воздерживаться от употребления пищи, питья, курения и полоскания горла.<br>
+Срок получения результата – от 6 до 24 часов<br>
+Результаты ПЦР-теста можно получить на украинском или английском языке без дополнительной оплаты.
+                         
+                        </div> 
+                    </div>
+                    <div class="main-5-2-1-elem">
+                        <div class="main-5-2-1-question">
+                            <div class="main-5-2-1-question-1">Я сдал анализ, получил результат, но приложение «Дій Вдома» не перестает требовать данные о моей геолокации и селфи.</div>
+                            <div class="main-5-2-1-question-2 flex"><img class="main-5-arrow" src="./img/arrow_accord.png" alt=""></div>
+                        </div>
+                        <div class="main-5-2-1-answer">
+                            Лаборатория передает все данные результатов тестов в Центр Общественного Здоровья Украины. И те в свою очередь снимают с самоизоляции и отключают приложение «Дій Вдома». Перед регистрацией на тест обязательно убедитесь, на какой номер телефона вы установили приложение « Дій Вдома». Этот номер телефона является идентификатором, поэтому важно, чтобы это был один и тот же номер. В случае дополнительных вопросов рекомендуем обращаться напрямую: Контактные данные Центр общественного здоровья (ЦОЗ) Украины: Тел: +380 44 425 43 54, эл. почта: info@phc.org.ua. Служба поддержки приложения «Дій вдома»: https://chat.diia.gov.ua                          
+                        </div> 
+                    </div>
+
+                </div>
+            </div>
+            <a name="call"></a>
+        </div>
+        <a name="contact"></a>
+
+        <div class="main-6">
+            <div class="main-6-2 container flex">
+                <div class="main-6-2-1">
+                    <h3 >ЗАПОЛНИТЕ ФОРМУ!</h3>
+                    <p>Заполните поля ниже и мы свяжемся с Вами в ближайшее время!</p>
+                    <form id="callbackForm" name="callbackForm" method="post">
+                        <div class="main-6-2-1-block flex">
+                            <div class="main-6-2-1-block-1 flex">
+                                <img src="./img/icon-name.png" alt="">
+                            </div>
+                            <div class="main-6-2-1-block-2 flex">
+                                <label for="form-contacts_name">Введите Ваше имя</label>
+                                <input type="text" name="name" class="" id="form-contacts_name" placeholder="Иван">
+                            </div>
+                        </div>
+
+                        <div class="main-6-2-2-block flex">
+                            <div class="main-6-2-2-block-1 flex">
+                                <img src="./img/icon-form-phone.png" alt="">
+                            </div>
+                            <div class="main-6-2-2-block-2 flex">
+                                <label for="form-contacts_phone">Введите номер телефона</label>
+                                <input type="tel" name="phone" class="" id="form-contacts_phone" placeholder="+38 ххх ххх хх хх">
+                            </div>
+                        </div>
+                        <button type="button" id="btn-callback" class="btn-main-6">Отправить заявку</button>
+                        <!-- <button type="button" id="send-app" name="button" class="send-app">Оформить заявку</button> -->
+
+                    </form>
+                    <div id="error-mess-callback" class="error-mess-callback"></div>
+                </div>
+                <div class="main-6-2-2">
+                    <h2>КОНТАКТЫ</h2>
+                    <ul class="">
+                        <li>
+                            <span>Телефон</span>
+                            <img src="./img/icon_phone.png" alt=""><span><a href="tel:+380961121515">+38 096 112 15 15</a></span>
+                        </li>
+
+                        <li>
+                            <span>Email</span>
+                            <img src="./img/icon_mail.png" alt=""><span class="form-mail"><a href="mailto:info@callab.com.ua">info@callab.com.ua</a></span>
+                        </li>
+                    </ul>
+
+                    <div class="visa">
+                        Мы в социальных сетях<br>
+                        <a href="https://m.facebook.com/CallabUkraine/"><img width="20" src="./img/fb.png" alt="лаборатория callab facebook"></a>  <a href="https://www.instagram.com/callabukraine/"><img width="20" src="./img/insta.png" alt="лаборатория callab instagram"></a>
+                    </div>
+
+                    <div class="visa">
+                        Принимаем:<br>
+                        <img src="./img/payment2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>Copyright © 2020 Callab</div>
+        </div>
+    </main>
+</body>
+</html>

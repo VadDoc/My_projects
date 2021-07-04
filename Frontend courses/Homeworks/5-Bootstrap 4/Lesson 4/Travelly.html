@@ -1,0 +1,1138 @@
+<!-- Добрый день! Сделав страницу сайта, мне не понравилось, как реагируют его элементы на сужение экрана: на относительно узком экране оставалась большая высота в header из-за большой высоты картинки, что было очень непропорционально, фоновая картинка обрезалась, также на узком экране плохо смотрелись большие шрифты заголовков, несоответствовали отступы и пр. В итоге решил по максимуму воспользоваться новым умением: "скрытием элементов"))). Что сделал: прописал отдельно каждую страницу для каждого брейкпоинта, включая размеры картинки фона, картинкок, отступов, шрифтов и т.д.  Интересно Ваше мнение... Насколько правильно решение этой задачи, ведь код увеличился чуть ли не в 5 раз? Какие существуют другие подходы? Я вижу единственный выход для уменьшения кода - это совмещение с js. В HTML коде прописывать поведение блочных элементов на брейкпоинтах, а в js - в зависимости от ширины экрана, менять размеры шрифтов, картинок, отступов и пр.. Но думаю, последний способ намного затратнее по объему работы и выигрыш сомнительный))) Буду признателен за ккомментарии -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/travelly.css">
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+
+    <!-- ========================== for > xl ==================================== -->
+
+    <div class="d-none d-xl-block">
+      <header class='header-h-xl'>
+        <div class="row m-0">
+          <div class="col prl-main-xl">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <a class="navbar-brand" href="#"><img class="plane" src="./images/Logo.png" alt=""><span
+                  class="navbar-brand travelly font-weight-light">travelly</span></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav list-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">BLOG</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">PRESS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CONCAT</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+            <div class='text-center-xl'>
+              <div class="d-flex flex-row justify-content-center display-3 text-white mt-5 pt-5 mb-2">
+                Where will your go next?
+              </div>
+              <div class="d-flex mb-1 flex-row justify-content-center header-text ">
+                <div class="col-6 input-group input-group-lg mt-4 pl-4 pr-4">
+                  <input type="text" class="form-control" placeholder="Start typing..." aria-label="Start typing..."
+                    aria-describedby="button-1">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-danger text-white bg-danger pl-5 pr-5" type="button"
+                      id="button-1">GO</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="container-fluid bg-light-gray pb-5">
+          <div class="row prl-main-xl">
+            <div class="col-12 font-weight-bold text-dark mt-5">
+              TOP DESTINATIONS
+            </div>
+            <div class="col-12 text-secondary mb-3">
+              Some of the top destinations for your next summer adventure.
+            </div>
+
+            <div class="col-3 mt-2 mb-2">
+              <div class="card cards-xl">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/Australia.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$1.095</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">AMAZING AUSTRALIA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to Australia. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3 mt-2 mb-2">
+              <div class="card cards-xl">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/SouthAmerica.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$1.295</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">ANCIENT SOUTH AMERICA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to South America. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3 mt-2 mb-2">
+              <div class="card cards-xl">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/NorthAmerica.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$695</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">MODERN NORTH AMERICA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to North America. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3 mt-2 mb-2">
+              <div class="card cards-xl">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/Europe.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$295</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">CLASSIC EUROPE</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to Europe. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid bg-light pb-5">
+          <div class="row prl-main-xl">
+            <div class="col-12 display-3 pt-5 mb-3">
+              Before your leave
+            </div>
+
+            <div class="col-4 mb-2 mt-4">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-4 mb-2 mt-4">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-4 mb-2 mt-4">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class='col-12'>
+              <div class="d-flex flex-row justify-content-center mt-4 pt-4 mb-2">
+                <h6>GET HOTEST DEALS TO YOUR INBOX</h6>
+              </div>
+              <div class="d-flex mb-1 flex-row justify-content-center header-text ">
+                <div class="col-6 input-group input-group-lg mt-4 pl-4 pr-4">
+                  <input type="text" class="form-control" placeholder="Email address" aria-label="Start typing..."
+                    aria-describedby="button-1">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-danger text-white bg-danger pl-4 pr-4" type="button"
+                      id="button-1">SUBSCRIBE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="col-12 p-0">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light-gray prl-main-xl">
+            <span class='copy-footer text-secondary'>Copyright &copy; 2014. All rights Reserved. Designed for
+              Despreneur.</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto text-dark">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">BLOG</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">PRESS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ========================== for lg - xl ==================================== -->
+
+    <div class="d-none d-lg-block d-xl-none">
+      <header class='header-h-lg'>
+        <div class="row m-0">
+          <div class="col prl-main-lg">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <a class="navbar-brand" href="#"><img class="plane" src="./images/Logo.png" alt=""><span
+                  class="navbar-brand travelly font-weight-light">travelly</span></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav list-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">BLOG</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">PRESS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CONCAT</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+            <div class='text-center-lg'>
+              <div class="d-flex flex-row justify-content-center display-4 text-white mt-5 pt-5 mb-2">
+                Where will your go next?
+              </div>
+              <div class="d-flex mb-1 flex-row justify-content-center header-text ">
+                <div class="col-6 input-group mt-3 pl-4 pr-4">
+                  <input type="text" class="form-control" placeholder="Start typing..." aria-label="Start typing..."
+                    aria-describedby="button-1">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-danger text-white bg-danger pl-4 pr-4" type="button"
+                      id="button-1">GO</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="container-fluid bg-light-gray pb-5">
+          <div class="row prl-main-lg">
+            <div class="col-12 font-weight-bold text-dark mt-5">
+              TOP DESTINATIONS
+            </div>
+            <div class="col-12 text-secondary mb-3">
+              Some of the top destinations for your next summer adventure.
+            </div>
+
+            <div class="col-3 mt-2 mb-2">
+              <div class="card cards-lg">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/Australia.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$1.095</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">AMAZING AUSTRALIA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to Australia. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3 mt-2 mb-2">
+              <div class="card cards-lg">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/SouthAmerica.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$1.295</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">ANCIENT SOUTH AMERICA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to South America. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3 mt-2 mb-2">
+              <div class="card cards-lg">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/NorthAmerica.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$695</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">MODERN NORTH AMERICA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to North America. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3 mt-2 mb-2">
+              <div class="card cards-lg">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/Europe.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$295</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">CLASSIC EUROPE</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to Europe. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid bg-light pb-4">
+          <div class="row prl-main-lg">
+            <div class="col-12 display-4 pt-4 mb-2">
+              Before your leave
+            </div>
+
+            <div class="col-4 mb-2 mt-3">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-4 mb-2 mt-3">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-4 mb-2 mt-3">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class='col-12'>
+              <div class="d-flex flex-row justify-content-center mt-3 pt-3 mb-2">
+                <h6>GET HOTEST DEALS TO YOUR INBOX</h6>
+              </div>
+              <div class="d-flex mb-1 flex-row justify-content-center header-text ">
+                <div class="col-8 input-group mt-4 pl-4 pr-4">
+                  <input type="text" class="form-control" placeholder="Email address" aria-label="Start typing..."
+                    aria-describedby="button-1">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-danger text-white bg-danger pl-4 pr-4" type="button"
+                      id="button-1">SUBSCRIBE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="col-12 p-0">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light-gray prl-main-lg">
+            <span class='copy-footer text-secondary'>Copyright &copy; 2014. All rights Reserved. Designed for
+              Despreneur.</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto text-dark">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">BLOG</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">PRESS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ========================== for md - lg ==================================== -->
+
+    <div class="d-none d-md-block d-lg-none">
+      <header class="header-h-md">
+        <div class="row m-0">
+          <div class="col prl-main-md">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <a class="navbar-brand" href="#"><img class="plane-md" src="./images/Logo-md.png" alt=""><span
+                  class="navbar-brand travelly-md font-weight-light">travelly</span></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav list-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">BLOG</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">PRESS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CONCAT</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+            <div class='text-center-md'>
+              <div class="d-flex flex-row justify-content-center header-text-md text-white mt-5 pt-5 mb-2">
+                Where will your go next?
+              </div>
+              <div class="d-flex mb-1 flex-row justify-content-center header-text ">
+                <div class="col-7 input-group mt-3 pl-4 pr-4">
+                  <input type="text" class="form-control" placeholder="Start typing..." aria-label="Start typing..."
+                    aria-describedby="button-1">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-danger text-white bg-danger pl-3 pr-3" type="button"
+                      id="button-1">GO</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="container-fluid bg-light-gray pb-5">
+          <div class="row prl-main-md">
+            <div class="col-12 font-weight-bold text-dark mt-4 pt-2">
+              TOP DESTINATIONS
+            </div>
+            <div class="col-12 text-secondary mb-3">
+              Some of the top destinations for your next summer adventure.
+            </div>
+
+            <div class="col-6 mt-2 mb-2">
+              <div class="card cards-md">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/Australia.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$1.095</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">AMAZING AUSTRALIA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to Australia. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 mt-2 mb-2">
+              <div class="card cards-md">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/SouthAmerica.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$1.295</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">ANCIENT SOUTH AMERICA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to South America. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 mt-2 mb-2">
+              <div class="card cards-md">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/NorthAmerica.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$695</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">MODERN NORTH AMERICA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to North America. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 mt-2 mb-2">
+              <div class="card cards-md">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/Europe.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$295</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">CLASSIC EUROPE</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to Europe. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid bg-light pb-4">
+          <div class="row prl-main-md">
+            <div class="col-12 display-4 pt-4 mb-3 header-text-md">
+              Before your leave
+            </div>
+
+            <div class="col-4 mb-2 mt-3">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-4 mb-2 mt-3">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-4 mb-2 mt-3">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class='col-12'>
+              <div class="d-flex flex-row justify-content-center mt-3 pt-3 mb-2">
+                <h6>GET HOTEST DEALS TO YOUR INBOX</h6>
+              </div>
+              <div class="d-flex mb-1 flex-row justify-content-center header-text ">
+                <div class="col-9 input-group mt-4 pl-4 pr-4">
+                  <input type="text" class="form-control" placeholder="Email address" aria-label="Start typing..."
+                    aria-describedby="button-1">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-danger text-white bg-danger pl-2 pr-2" type="button"
+                      id="button-1">SUBSCRIBE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="col-12 p-0">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light-gray prl-main-md">
+            <span class='copy-footer text-secondary'>Copyright &copy; 2014. All rights Reserved. Designed for
+              Despreneur.</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto text-dark">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">BLOG</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">PRESS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ========================== for sm - md ==================================== -->
+
+    <div class="d-none d-sm-block d-md-none">
+      <header class="header-h-sm">
+        <div class="row m-0">
+          <div class="col prl-main-sm">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <a class="navbar-brand" href="#"><img class="plane-sm" src="./images/Logo-sm.png" alt=""><span
+                  class="navbar-brand travelly-sm font-weight-light">travelly</span></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav list-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">BLOG</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">PRESS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CONCAT</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+            <div class='text-center-sm'>
+              <div class="d-flex flex-row justify-content-center header-text-sm text-white mt-5 pt-5 mb-2">
+                Where will your go next?
+              </div>
+              <div class="d-flex mb-1 flex-row justify-content-center header-text ">
+                <div class="col-8 input-group input-group-sm mt-3 pl-4 pr-4">
+                  <input type="text" class="form-control" placeholder="Start typing..." aria-label="Start typing..."
+                    aria-describedby="button-1">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-danger text-white bg-danger pl-2 pr-2" type="button"
+                      id="button-1">GO</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="container-fluid bg-light-gray pb-4">
+          <div class="row prl-main-sm">
+            <div class="col-12 font-weight-bold text-dark mt-4">
+              TOP DESTINATIONS
+            </div>
+            <div class="col-12 text-secondary mb-2">
+              Some of the top destinations for your next summer adventure.
+            </div>
+
+            <div class="col-6 mt-2 mb-2">
+              <div class="card cards-sm">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/Australia.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$1.095</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">AMAZING AUSTRALIA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to Australia. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 mt-2 mb-2">
+              <div class="card cards-sm">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/SouthAmerica.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$1.295</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">ANCIENT SOUTH AMERICA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to South America. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 mt-2 mb-2">
+              <div class="card cards-sm">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/NorthAmerica.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$695</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">MODERN NORTH AMERICA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to North America. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 mt-2 mb-2">
+              <div class="card cards-sm">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/Europe.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$295</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">CLASSIC EUROPE</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to Europe. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid bg-light pb-3">
+          <div class="row prl-main-sm">
+            <div class="col-12 display-3 pt-3 mb-2 header-text-sm">
+              Before your leave
+            </div>
+
+            <div class="col-12 mb-2 mt-2">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 mb-2 mt-2">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 mb-2 mt-2">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class='col-12'>
+              <div class="d-flex flex-row justify-content-center mt-2 pt-2 mb-2">
+                <h6>GET HOTEST DEALS TO YOUR INBOX</h6>
+              </div>
+              <div class="d-flex mb-1 flex-row justify-content-center header-text ">
+                <div class="col-11 input-group input-group-sm mt-4 pl-4 pr-4">
+                  <input type="text" class="form-control" placeholder="Email address" aria-label="Start typing..."
+                    aria-describedby="button-1">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-danger text-white bg-danger pl-2 pr-2" type="button"
+                      id="button-1">SUBSCRIBE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="col-12 p-0">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light-gray prl-main-sm">
+            <span class='copy-footer text-secondary'>Copyright &copy; 2014. All rights Reserved. Designed for
+              Despreneur.</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto text-dark">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">BLOG</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">PRESS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ========================== for xs - sm ==================================== -->
+
+    <div class="d-block d-sm-none">
+      <header class="header-h-xs">
+        <div class="row m-0">
+          <div class="col prl-main-xs">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <a class="navbar-brand" href="#"><img class="plane-xs" src="./images/Logo-xs.png" alt=""><span
+                  class="navbar-brand travelly-xs font-weight-light">travelly</span></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav list-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">BLOG</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">PRESS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CONCAT</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+            <div class='text-center-xs'>
+              <div class="d-flex flex-row justify-content-center header-text-xs text-white mt-4 pt-4 mb-2">
+                Where will your go next?
+              </div>
+              <div class="d-flex mb-1 flex-row justify-content-center header-text ">
+                <div class="col-11 input-group input-group-sm mt-3 pl-4 pr-4">
+                  <input type="text" class="form-control" placeholder="Start typing..." aria-label="Start typing..."
+                    aria-describedby="button-1">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-danger text-white bg-danger pl-2 pr-2" type="button"
+                      id="button-1">GO</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="container-fluid bg-light-gray pb-4">
+          <div class="row prl-main-xs">
+            <div class="col-12 font-weight-bold text-dark mt-4">
+              TOP DESTINATIONS
+            </div>
+            <div class="col-12 text-secondary mb-3">
+              Some of the top destinations for your next summer adventure.
+            </div>
+
+            <div class="col-12 mt-2 mb-2">
+              <div class="card cards-xs">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/Australia.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$1.095</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">AMAZING AUSTRALIA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to Australia. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 mt-2 mb-2">
+              <div class="card cards-xs">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/SouthAmerica.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$1.295</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">ANCIENT SOUTH AMERICA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to South America. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 mt-2 mb-2">
+              <div class="card cards-xs">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/NorthAmerica.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$695</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">MODERN NORTH AMERICA</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to North America. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 mt-2 mb-2">
+              <div class="card cards-xs">
+                <div class="card text-white border-0">
+                  <img class="card-img" src="./images/Europe.jpg" alt="Card image cap">
+                  <div class='col align-self-end'>
+                    <div class="card-img-overlay p-3">
+                      <p class="card-text text-overlay">$295</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body bg-light">
+                  <h6 class="card-title text-dark">CLASSIC EUROPE</h6>
+                  <p class="card-text text-secondary">Become inspired to travel to Europe. Discover fantastic
+                    things to do & place to go.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid bg-light pb-3">
+          <div class="row prl-main-xs">
+            <div class="col-12 display-4 pt-3 mb-3 header-text-xs">
+              Before your leave
+            </div>
+
+            <div class="col-12 mb-1 mt-1">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 mb-1 mt-1">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 mb-1 mt-1">
+              <div class="bg-light ">
+                <h6 class="">VIZA & DOCUMENT</h6>
+                <p class="">There some things your should take care of before going ti your next adventure. We'll help
+                  your to get required visas and documents needed.
+                </p>
+              </div>
+            </div>
+
+            <div class='col-12'>
+              <div class="d-flex flex-row justify-content-center mt-2 pt-2 mb-2">
+                <h6>GET HOTEST DEALS TO YOUR INBOX</h6>
+              </div>
+              <div class="d-flex mb-1 flex-row justify-content-center header-text ">
+                <div class="col-12 input-group input-group-sm mt-4 pl-4 pr-4">
+                  <input type="text" class="form-control" placeholder="Email address" aria-label="Start typing..."
+                    aria-describedby="button-1">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-danger text-white bg-danger pl-1 pr-1" type="button"
+                      id="button-1">SUBSCRIBE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="col-12 p-0">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light-gray prl-main-xs">
+            <span class='copy-footer-sm text-secondary'>Copyright &copy; 2014. All rights Reserved. Designed for
+              Despreneur.</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto text-dark">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">BLOG</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">PRESS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <!------------------------------------------ Javascript ------------------------------------------->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+  <script src="./js/travelly.js"></script>
+</body>
+
+</html>

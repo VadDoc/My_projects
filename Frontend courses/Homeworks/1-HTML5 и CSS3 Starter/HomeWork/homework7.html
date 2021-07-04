@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/homework7.css">
+  <title>Form</title>
+</head>
+
+<body>
+  <section class="name-section">
+    <article>
+      <fieldset class="name-fieldset">
+        <legend class="name-legend">Personal information</legend>
+        <form class="name-form" method="get" action="./form.php" enctype="text/plain">
+          <div class="line">
+            <label class="name-label-bold" for="first-name" accesskey="1" required>*First name: </label>
+            <input class="name-input" type="text" name="first-name" id="first-name" size="45">
+          </div>
+          <div class="line">
+            <label class="name-label" for="middle-name" accesskey="2">Middle name: </label>
+            <input class="name-input" type="text" name="middle-name" id="middle-name" size="45">
+          </div>
+          <div class="line">
+            <label class="name-label-bold" for="last-name" accesskey="3" required>*Last name: </label>
+            <input class="name-input" type="last-name" name="last-name" id="login" size="45">
+          </div>
+        </form>
+      </fieldset>
+    </article>
+    <article>
+      <fieldset class="address-fieldset">
+        <legend class="address-legend">Address</legend>
+        <form action="./form.php" method="get" enctype="text/plain">
+          <div class="line">
+            <label class="address-label" for="address" accesskey="4">Address:</label>
+            <input class="address-input" type="text" name="address" id="address" size="45">
+          </div>
+          <div class="line">
+            <label class="address-label" for="city" accesskey="5">City or town:</label>
+            <input class="address-input" type="text" name="city" id="city" size="45">
+          </div>
+          <div class="line">
+            <label class="address-label" for="state" accesskey="6">State:</label>
+            <select class="address-select states" name="state" id="state">
+              <div class="right">
+                <option disabled selected>Choose a State</option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkansas">Arkansas</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Delaware">Delaware</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+              </div>
+            </select>
+          </div>
+          <div class="line">
+            <label class="address-label-bold" for="zip" accesskey="7" required>*Zip code:</label>
+            <input class="address-input" type="text" name="zip" id="zip" size="45">
+          </div>
+        </form>
+      </fieldset>
+    </article>
+  </section>
+
+  <section class="login-section">
+    <article class="login-article">
+      <h3>Login to Web App</h3>
+      <form class="login-form" action="./form.php" method="get" enctype="text/plain">
+        <div>
+          <input class="username" type="text" name="login" placeholder="Username or Email" size="45">
+        </div>
+        <div>
+          <input class="password" type="password" name="pass" placeholder="Password" size="45">
+        </div>
+        <div class="checkbox-remember">
+          <input class="checkbox" type="checkbox" name="remember" id="remember">
+          <label class="remember" for="remember">Remember me on this computer</label>
+        </div>
+        <div>
+          <input class="submit" type="submit" value="Login" />
+        </div>
+      </form>
+    </article>
+    <div class="reset">
+      Forgot your password? <a href="#">Click here</a> to reset it.
+    </div>
+  </section>
+</body>
+
+</html>
